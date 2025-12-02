@@ -30,33 +30,46 @@
 
 <body>
     <!--::header part start::-->
-    <header class="header-clean">
-    <div class="container d-flex justify-content-between align-items-center py-3">
+    <section class="bg-white ">
+  <header class="main_menu  home_menu">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                         <div class="logo">
+                            <h3 class="m-0">Juste-Cœur <span>Beaubrun</span></h3>
+                            <small>LEADERSHIP · INNOVATION · JEUNESSE</small>
+                        </div>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="menu_icon"><i class="ti-menu"></i></span>
+                        </button>
 
-        <div class="logo">
-            <h3 class="m-0">Juste-Cœur Beaubrun</h3>
-            <small>LEADERSHIP · INNOVATION · JEUNESSE</small>
+                        <div class="collapse navbar-collapse main-menu-item" id="navbarSupportedContent">
+                            <ul class="navbar-nav">
+                             <li class="nav-item"><a class="nav-link" href="about.html">À propos</a></li> 
+                             <li class="nav-item"><a class="nav-link" href="projet.html">Projets</a></li> 
+                             <li class="nav-item"><a class="nav-link" href="about.html">Publications</a></li> 
+                             <li class="nav-item"><a class="nav-link" href="about.html">Témoignages</a></li> 
+                             <li class="nav-item"><a class="nav-link" href="about.html">Blog</a></li> 
+                             <li class="nav-item"><a class="mt-3 btn-invite btn btn-primary" href="about.html btn btn-primary">Inviter Juste Coeur</a></li> 
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
         </div>
-
-        <nav class="nav-links">
-            <a href="about.html">À propos</a>
-            <a href="projet.html">Projets</a>
-            <a href="#">Publications</a>
-            <a href="#">Témoignages</a>
-            <a href="#">Blog</a>
-            <a href="#">Contact</a>
-        </nav>
-
-        <a href="#" class="btn-invite">Inviter Juste-Cœur</a>
-    </div>
     </header>
+    </section>
+  
+    <!-- Header part end-->
 
     <!-- Header part end-->
     <!-- SECTION BLEUE -->
 <section class="hero-blue position-relative py-5">
   <div class="container">
     <div class="row align-items-center">
-
       <div class="col-lg-6">
         <span class="badge bg-light text-primary mb-3">
           Entrepreneur social · Leader jeunesse
@@ -72,22 +85,25 @@
           l’innovation, de l’éducation et du développement local.
         </p>
 
-        <div class="d-flex gap-3 mt-4">
-          <a href="#" class="btn btn-primary px-4 py-2">Proposer une collaboration</a>
-          <a href="#" class="btn btn-outline-light px-4 py-2">Découvrir mon parcours</a>
+        <div class=" gap-3 mt-4">
+          <a href="#" class="btn btn-primary mt-3 px-4 py-2">Proposer une collaboration</a>
+          <a href="#" class="btn btn-outline-light mt-3 px-4 py-2">Découvrir mon parcours</a>
         </div>
 
-        <ul class="list-unstyled mt-4 text-white">
-          <li class="mb-2"><i class="bi bi-check-circle text-primary"></i> Engagement citoyen</li>
-          <li class="mb-2"><i class="bi bi-check-circle text-primary"></i> Innovation sociale</li>
-          <li><i class="bi bi-check-circle text-primary"></i> Bâtisseur de communautés</li>
+        <ul class="mt-4 text-white">
+          <li class="mb-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#007bff" class="bi bi-check-circle-fill me-2" viewBox="0 0 16 16">
+                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                        </svg> Engagement citoyen</li>
+          <li class="mb-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#007bff" class="bi bi-check-circle-fill me-2" viewBox="0 0 16 16">
+                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                        </svg> Innovation sociale</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#007bff" class="bi bi-check-circle-fill me-2" viewBox="0 0 16 16">
+                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                        </svg> Bâtisseur de communautés</li>
         </ul>
       </div>
-
     </div>
   </div>
-
-  <!-- IMAGE EN POSITION ABSOLUE -->
   <img src="img/banner_bg_2.png" class="hero-abs-img" alt="Portrait">
 </section>
 
@@ -95,20 +111,23 @@
 <!-- SECTION BLANCHE -->
 <section class="hero-white py-5">
   <div class="container">
+    <div class="col-lg-7">
     <h2 class="fw-bold">
       <span class="text-primary">Un parcours</span> qui relie le local et le global
     </h2>
 
-    <p class="mt-3  col-lg-6 text-muted">
+    <p class="text-dark">
       Du Nord-Ouest rural d'Haïti aux scènes internationales, Juste-Cœur construit 
       des ponts entre jeunesse, innovation et développement.
     </p>
 
-    <a href="#" class="text-primary">Lire la biographie complète →</a>
+    <a href="about.html" class="mt-3 text-primary">Lire la biographie complète →</a>
+    </div>
+    
   </div>
 </section>
 
-<section class="timeline-section py-5 bg-light">
+<!-- <section class="timeline-section py-5 bg-light">
     <div class="container">
         <div class="row text-center">
 
@@ -154,8 +173,57 @@
 
         </div>
     </div>
+</section> -->
+
+<section class="timeline-section py-5 bg-light">
+    <div class="container">
+        <div class="row position-relative">
+
+            <div class="timeline-connector d-none d-lg-block"></div>
+<div class="timeline-dot"></div>
+            <div class="col-lg timeline-box">
+                
+                <h5 class="fw-bold mt-3">Bivouac, Môle Saint-Nicolas</h5>
+                <p class="text-muted">
+                    Origines, engagement communautaire et contact direct avec les réalités du territoire.
+                </p>
+            </div>
+<div class="timeline-dot"></div>
+            <div class="col-lg timeline-box">
+                
+                <h5 class="fw-bold mt-3">Université Notre Dame d'Haïti</h5>
+                <p class="text-muted">
+                    Licence en économie, compréhension des dynamiques macro et micro-économiques.
+                </p>
+            </div>
+<div class="timeline-dot"></div>
+            <div class="col-lg timeline-box">
+                
+                <h5 class="fw-bold mt-3">HELP & OSUN Bard College</h5>
+                <p class="text-muted">
+                    Parcours en leadership, citoyenneté, IT et entreprise sociale.
+                </p>
+            </div>
+<div class="timeline-dot"></div>
+            <div class="col-lg timeline-box">
+                <h5 class="fw-bold mt-3">PLES</h5>
+                <p class="text-muted">
+                    Co-fondateur du Programme de Leadership et d’Entrepreneuriat Scolaire.
+                </p>
+            </div>
+            <div class="timeline-dot"></div>
+              <div class="col-lg timeline-box">
+                  <h5 class="fw-bold mt-3">Banj Labs</h5>
+                  <p class="text-muted">
+                      Direction de l’incubation, de la recherche et de programmes d’innovation.
+                  </p>
+              </div>
+          </div>
+    </div>
 </section>
 
+<!-- =========================
+     SECTION MISSION!-->
 <section class="mission-section py-5">
     <div class="container">
         <div class="row align-items-center gy-5">
@@ -169,15 +237,19 @@
             <div class="col-lg-6">
                 <div class="mission-card p-4 p-lg-5">
                     <span class="text-uppercase small text-secondary">Mission</span>
-                    <h3 class="fw-bold text-white mt-3">
+                    <h3 class="fw-bold fs-5 text-white mt-3">
                         Créer des écosystèmes où les jeunes ne sont pas seulement invités à participer, 
                         mais outillés pour transformer leurs communautés.
                     </h3>
                     <p class="text-white-50 mt-3">
                         À travers ses programmes, Juste-Cœur travaille à rendre l’innovation accessible, 
                         à faire circuler les opportunités et à créer des ponts entre territoires, 
-                        institutions et talents.
-                    </p>
+                        institutions et talents. </p> <br>
+                       <p> À travers ses programmes, Juste-Cœur travaille à rendre l’innovation accessible, 
+                        à faire circuler les opportunités et à créer des ponts entre territoires, 
+                        institutions et talents.</p>
+                      
+                    
                 </div>
             </div>
         </div>
@@ -190,15 +262,22 @@
 ========================== -->
 <section class="projects container my-5">
   <div class="row">
-    <div class="col-12 text-center">
-      <h2 class="display-5 fw-bold">Projets et programmes phares</h2>
-      <p class="lead text-muted mb-4">
+    <div class="col-12 ">
+      <div class="justify-content-center align-items-center text-center">
+<h2 class="display-5 fw-bold">Projets et programmes phares</h2>
+      <div class="container w-100 d-flex justify-content-center">
+        <p class="lead col-lg-6 text-muted mb-4">
         Des programmes qui connectent les jeunes aux outils, mentors et opportunités
         dont ils ont besoin pour transformer leurs communautés.
       </p>
-
-      <a href="#" class="btn btn-outline-primary mb-5 explore">Explorer tous les projets →</a>
-    </div>
+      </div>
+      </div>
+      
+<div class="d-flex justify-content-lg-end">
+  <a href="projet.html" class=" mb-5 explore">Explorer tous les projets →</a>
+   
+</div>
+     </div>
   </div>
 
   <div class="row justify-content-center">
@@ -270,7 +349,7 @@
 </section>
 <!-- ================= SECTION 1 ================= -->
 
- <section class="service_part padding_bottom">
+ <!-- <section class="service_part padding_bottom">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-6">
@@ -310,8 +389,97 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
+    <section class="service_part padding_bottom">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <div class="section_tittle text-center">
+                    <h2>Reconnaissances et distinctions</h2>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scrolling-container">
+            <div class="scrolling-accomplishments">
+                
+                <div class="single_service_part">
+                    <div class="single_service_text">
+                        <img class="img" src="./img/juste_coeut_web_assets_5.png" alt="">
+                        <h2>Top Jeunes Innovateurs</h2>
+                        <p>Forbes Haïti 2023</p>
+                    </div>
+                </div>
+                <div class="single_service_part active">
+                    <div class="single_service_text">
+                        <img class="img" src="./img/juste_coeut_web_assets_5.png" alt="">
+                        <h2>Prix du leadership</h2>
+                        <p>World Youth Excellence Awards</p>
+                    </div>
+                </div>
+                <div class="single_service_part">
+                    <div class="single_service_text">
+                        <img class="img" src="./img/juste_coeut_web_assets_5.png" alt="">
+                        <h2>Partenaire Programme</h2>
+                        <p>Open Society Foundation</p>
+                    </div>
+                </div>
+                <div class="single_service_part active">
+                    <div class="single_service_text">
+                        <img class="img" src="./img/juste_coeut_web_assets_5.png" alt="">
+                        <h2>Prix du leadership</h2>
+                        <p>World Youth Excellence Awards</p>
+                    </div>
+                </div>
+                <div class="single_service_part">
+                    <div class="single_service_text">
+                        <img class="img" src="./img/juste_coeut_web_assets_5.png" alt="">
+                        <h2>Partenaire Programme</h2>
+                        <p>Open Society Foundation</p>
+                    </div>
+                </div>
+                
+                <div class="single_service_part">
+                    <div class="single_service_text">
+                        <img class="img" src="./img/juste_coeut_web_assets_5.png" alt="">
+                        <h2>Top Jeunes Innovateurs</h2>
+                        <p>Forbes Haïti 2023</p>
+                    </div>
+                </div>
+                <div class="single_service_part active">
+                    <div class="single_service_text">
+                        <img class="img" src="./img/juste_coeut_web_assets_5.png" alt="">
+                        <h2>Prix du leadership</h2>
+                        <p>World Youth Excellence Awards</p>
+                    </div>
+                </div>
+                <div class="single_service_part">
+                    <div class="single_service_text">
+                        <img class="img" src="./img/juste_coeut_web_assets_5.png" alt="">
+                        <h2>Top Jeunes Innovateurs</h2>
+                        <p>Forbes Haïti 2023</p>
+                    </div>
+                </div>
+                <div class="single_service_part active">
+                    <div class="single_service_text">
+                        <img class="img" src="./img/juste_coeut_web_assets_5.png" alt="">
+                        <h2>Prix du leadership</h2>
+                        <p>World Youth Excellence Awards</p>
+                    </div>
+                </div>
+                <div class="single_service_part">
+                    <div class="single_service_text">
+                        <img class="img" src="./img/juste_coeut_web_assets_5.png" alt="">
+                        <h2>Partenaire Programme</h2>
+                        <p>Open Society Foundation</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        </div>
+</section>
 <!-- ================= SECTION 2 ================= -->
 <section class="quote-section">
   <p>

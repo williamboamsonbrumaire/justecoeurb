@@ -65,3 +65,6 @@ var review = $('.client_review_part');
   }
 
 }(jQuery));
+
+    // Sélection
+
