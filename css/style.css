@@ -5989,9 +5989,9 @@ h6 {
     flex: 1;
     position: absolute;
     z-index: 5;
-    left: 45%;
+    left: 30%;
     right: 4%;
-    max-width: 200px;
+    max-width: 140px;
     top:65%;
 }
 
@@ -6190,6 +6190,10 @@ h6 {
    Desktop reste EXACTEMENT COMME IL EST
 ----------------------------------------------------------- */
 @media (max-width: 1000px) {
+
+  .dispay-none-mobile {
+      display: none !important;
+  }
 
   /* Masquer complètement la photo */
   .profile-image-container img {
@@ -6502,7 +6506,7 @@ h6 {
 
 /* RESPONSIVE */
 @media (max-width: 900px) {
-  .container {
+  .container-programmes {
     grid-template-columns: 1fr;
   }
 
