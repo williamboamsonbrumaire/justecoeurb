@@ -2323,6 +2323,9 @@ ul {
     color: #000;
     padding: 5px 15px !important;
   }
+  .main_menu .main-menu-item .nav-item .btn {
+    margin: 30px 0px 0px 15px !important ;
+  }
 
   .navbar-collapse {
     background-color: #fff;
@@ -2407,13 +2410,13 @@ ul {
 /*  */
 /* --- HEADER --- */
 
-.btn-invite {
+/* .btn-invite {
     background: #2d7dff;
     color: white;
     padding: 10px 22px;
     border-radius: 30px;
     font-weight: 600;
-}
+} */
 
 
 
@@ -2503,7 +2506,7 @@ ul {
 @media (max-width: 768px) {
 
     .hero-abs-img {
-      display: none;=
+      display: none;
     }
 
     .hero-blue {
@@ -2743,7 +2746,6 @@ ul {
    SECTION MESSAGE
 ============================ */
 .contact-section {
-  
   padding: 80px 20px;
 }
 
@@ -2832,10 +2834,11 @@ ul {
    RESPONSIVE
 ============================ */
 @media (max-width: 900px) {
+  .contact-section {
+  padding: 10px;
+}
   .contact-box {
     flex-direction: column;
-
-    
   }
 
   .contact-image img {
@@ -2954,6 +2957,16 @@ ul {
   margin-bottom: 35px;
 }
 
+/* Cachez tous les items qui ne sont pas actifs */
+.testimonials-item {
+    display: none; 
+}
+
+/* Affichez uniquement l'item actif */
+.testimonials-item.active {
+    display: block; /* ou 'flex', 'grid' selon votre mise en page */
+}
+
 /* AUTEUR */
 .author strong {
   display: block;
@@ -2992,13 +3005,17 @@ ul {
   width: 35%;
   display: flex;
   justify-content: center;
+  border-bottom-left-radius: 0;
+ border-top-left-radius: 50px;
+ border-bottom-right-radius: 50px;
+ border-top-left-radius: 50px;
 }
 
 .testimonials-image img {
   width: 300px;
   height: 380px;
   object-fit: cover;
-  border-radius: 150px;
+ 
 }
 
 /* RESPONSIVE */
@@ -3407,9 +3424,11 @@ ul {
     align-items: flex-start;
 }
 
-/* === LEFT SIDE TEXT === */
+/* === Contact Message === */
 .contact-section .left {
     flex: 1;
+    margin: 40px 10px;
+    width: 100%;
 }
 
 .contact-section h1 {
@@ -3438,7 +3457,7 @@ ul {
 }
 
 .btn {
-    padding: 14px 28px;
+    /* padding: 14px 20px; */
     border-radius: 30px;
     font-size: 15px;
     font-weight: 600;
@@ -3468,6 +3487,8 @@ ul {
 /* === FORM CARD === */
 .right {
     flex: 1;
+    margin: 40px 13px;
+    width: 100%;
 }
 
 .contact-form {
@@ -3545,9 +3566,16 @@ ul {
 
 /* === RESPONSIVE === */
 @media (max-width: 900px) {
-    .contact-section .container {
+    .contact-section .container,.footer-links {
         flex-direction: column;
+        padding: 0;
+        margin: 0;
     }
+    .contact-section .left {
+    flex: 1;
+    margin: 0px 10px;
+    width: 100%;
+}
 
     .buttons {
         flex-direction: column;
@@ -3558,6 +3586,12 @@ ul {
         text-align: center;
         width: 100%;
     }
+
+    .contact-form {
+    background: #fff;
+    padding: 40px;
+    
+}
 }
 
 @media (max-width: 500px) {
@@ -5835,9 +5869,9 @@ h6 {
 
 /* --- Onglets de navigation --- */
 .profile-navigation {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    width: 100%;
+    margin-top:190px ;
+    padding: 26px 80px;
     margin-bottom: 20px;
 }
 
@@ -5854,8 +5888,8 @@ h6 {
 }
 
 .nav-tab.active {
-    color: #007bff; /* Bleu pour l'onglet actif */
-    border-bottom: 2px solid #007bff;
+    color: #020617; /* Bleu pour l'onglet actif */
+    border-bottom: 2px solid #020617;
 }
 
 /* --- Contenu principal (Titre et Description) --- */
@@ -5899,7 +5933,6 @@ h6 {
     position: absolute;
     width: 100%;
     top: 80%;
- 
     flex: 1; /* Prend la majeure partie de l'espace horizontal */
     padding-right: 0px;
     padding-bottom: 40px; /* Espace sous les cartes */
@@ -5919,7 +5952,7 @@ h6 {
     width: 100%;
     position: relative;
     overflow: visible;
-    margin-top: -190px; /* Pour faire remonter l'image et qu'elle chevauche le fond blanc */
+    margin-top: -160px; /* Pour faire remonter l'image et qu'elle chevauche le fond blanc */
     margin-left: 590px;
 }
 
@@ -5933,7 +5966,7 @@ h6 {
 }
 
 .profile-image-container img {
-    max-width: 650px; /* nouvelle taille max */
+    max-width: 450px; /* nouvelle taille max */
     height: auto; /* proportions préservées */
 }
 /* --- Styles des Cartes --- */
@@ -5977,7 +6010,6 @@ h6 {
     margin: 0;
 }
 
-
 .card-title {
     font-size: 1em;
     font-weight: bold;
@@ -6010,6 +6042,18 @@ h6 {
 
 /* Responsive pour mobile */
 @media (max-width: 992px) {
+ /* Cacher l'image de profil sur petit écran */
+  .profile-image-container img {
+      display: none;
+  }
+
+  /* Adapter la zone d'information */
+  .dark-info-area {
+      height: auto !important;      /* s'ajuste automatiquement au contenu */
+      overflow: visible !important; /* ne coupe plus les div internes       */
+      padding-bottom: 20px;         /* sécurité si certains éléments ont des margins négatives */
+  }
+
     .info-layout-wrapper {
         flex-direction: column; /* Empiler les colonnes */
     }
@@ -6140,6 +6184,71 @@ h6 {
         min-width: 100%;
     }
 }
+
+/* -----------------------------------------------------------
+   RESPONSIVE — ACTIVÉ UNIQUEMENT SOUS 1000px
+   Desktop reste EXACTEMENT COMME IL EST
+----------------------------------------------------------- */
+@media (max-width: 1000px) {
+
+  /* Masquer complètement la photo */
+  .profile-image-container img {
+      display: none !important;
+  }
+
+  /* La zone sombre doit s’adapter au contenu */
+  .dark-info-area {
+      height: auto !important;
+      overflow: visible !important;
+      padding-bottom: 40px;
+  }
+
+  /* Le layout passe en colonne */
+  .info-layout-wrapper {
+      flex-direction: column !important;
+      gap: 20px;
+  }
+
+  /* La colonne des cartes revient avant l’image */
+  .cards-column {
+      order: 1;
+      position: relative !important;
+      width: 100%;
+      padding-right: 0;
+      top: auto !important;
+  }
+
+  /* La colonne Image devient juste un espace vide */
+  .image-column {
+      order: 2;
+      width: 100% !important;
+      height: 0 !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      overflow: hidden !important;
+  }
+
+  /* Les petites cartes s’empilent */
+  .small-cards-row {
+      flex-direction: column;
+      gap: 20px;
+  }
+
+  /* La carte expérience ne flotte plus dans l'image */
+  .roles-card-exp {
+      position: relative !important;
+      bottom: auto !important;
+      right: auto !important;
+      width: 100% !important;
+      margin-top: 20px;
+  }
+
+  /* Titres et textes légèrement réduits */
+  .text-intro h1 {
+      font-size: 1.8em;
+  }
+}
+
 
 
 
@@ -6702,7 +6811,7 @@ h6 {
   margin-bottom: 40px;
 }
 
-/* ================== BOUTONS ================== */
+/* ================== btn BOUTONS ================== */
 .cta-buttons {
   display: flex;
   justify-content: center;
@@ -6715,6 +6824,7 @@ h6 {
   border-radius: 40px;
   font-size: 15px;
   text-decoration: none;
+  border: none;
   font-weight: 600;
   transition: 0.3s ease;
 }
@@ -6722,10 +6832,21 @@ h6 {
 .btn-primary {
   background: white;
   color: #0a0f23;
+  border: none;
 }
 
 .btn-primary:hover {
-  background: #e5e8ff;
+  background: #0a0b4d;
+  transform: translateY(-2px);
+}
+.btn-secondary {
+  background: #0066FF;
+  color: #f1f1f1f1;
+  border: none;
+}
+
+.btn-primary:hover {
+  background: #0a0b4d;
   transform: translateY(-2px);
 }
 
@@ -6759,12 +6880,13 @@ h6 {
 }
 
 .footer-links a {
-  color: #7a808a;
+  color: #002244;
   text-decoration: none;
 }
 
 .footer-links a:hover {
   text-decoration: underline;
+  color: #002244;
 }
 
 /* ================== RESPONSIVE ================== */
@@ -6782,3 +6904,4 @@ h6 {
     text-align: center;
   }
 }
+

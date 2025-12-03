@@ -31,7 +31,8 @@
 <body>
     <!--::header part start::-->
   <!--::header part start::-->
-    <section class="bg-white ">
+     <!--::header part start::-->
+<section class="bg-white ">
   <header class="main_menu  home_menu">
         <div class="container">
             <div class="row align-items-center">
@@ -54,7 +55,7 @@
                              <li class="nav-item"><a class="nav-link" href="about.html">Publications</a></li> 
                              <li class="nav-item"><a class="nav-link" href="about.html">Témoignages</a></li> 
                              <li class="nav-item"><a class="nav-link" href="about.html">Blog</a></li> 
-                             <li class="nav-item"><a class="mt-3 btn-invite btn btn-primary" href="about.html btn btn-primary">Inviter Juste Coeur</a></li> 
+                             <li class="nav-item"><a class="mt-3 btn btn-primary mt-4 px-4 py-2" href="about.html btn btn-primary">Inviter Juste Coeur</a></li> 
                             </ul>
                         </div>
                     </nav>
@@ -62,16 +63,17 @@
             </div>
         </div>
     </header>
-    </section>
-  
+</section>
+    <!-- Header part end-->
     <!-- Header part end-->
 
 
     <section class="profile-header-section">
-        <div class="profile-navigation"   >
-            <button class="genric-btn info-border circle arrow nav-tab">BIOGRAPHIE</button>
-            <button class="genric-btn info-border circle arrow nav-tab">VISION</button>
-            <button class="genric-btn info-border circle arrow nav-tab active">PARCOURS</button>
+
+        <div class="profile-navigation mt-5">
+            <button class="btn btn-primary mt-3 px-4 py-2">BIOGRAPHIE</button>
+            <button class="btn btn-primary mt-3 px-4 py-2">VISION</button>
+            <button class="btn btn-primary mt-3 px-4 py-2 active">PARCOURS</button>
         </div>
 
         <div class="main-content-area d-flex justify-content-center align-items-center gap-4 flex-wrap">
@@ -85,6 +87,7 @@
             <div class="container">
                 <div class="info-layout-wrapper  row">
                     <div class="cards-column col-lg-5">
+
                         <div class="info-card origin-card">
                             <p class="card-title">Origines</p>
                             <ul>
@@ -113,32 +116,34 @@
                             </div>
                         </div>
 
-                    <div>
-                          <div class="context-text-area">
-                            <span class="location-tag">NORD-OUEST D'HAÏTI</span>
-                            <h3>Juste-Cœur grandit à Bivouac, localité de Môle Saint-Nicolas: un territoire qui lui rappelle chaque jour pourquoi il travaille pour les jeunes et les communautés.</h3>
-                            <p>Le décalage entre le potentiel des jeunes et les ressources et l’accès nourrit...</p>
-                        </div>
-                        </div>
+                        
+                            <div class="context-text-area">
+                                <span class="location-tag">NORD-OUEST D'HAÏTI</span>
+                                <h3>Juste-Cœur grandit à Bivouac, localité de Môle Saint-Nicolas: un territoire qui lui rappelle chaque jour pourquoi il travaille pour les jeunes et les communautés.</h3>
+                                <p>Le décalage entre le potentiel des jeunes et les ressources et l’accès nourrit...</p>
+                            </div>
+                       
+
                     </div>
                     
                     <div class="image-column col-lg-7">
                         <div class="profile-image-container" >
-                            <img src="./img/banner_bg_2.png" alt="">
+                            <img src="./img/jc_bio.png"  alt="">
 
                             <div class="info-card roles-card-exp">
-                <p class="card-title">Années d'experience</p>
-                    <h2 class="info-number">15+ ans</h2>
-                    <p class="info-text">
-                        À la croisée de l'innovation, de l'éducation, de l'entrepreneuriat
-                        social et du développement communautaire.
-                    </p>
-            </div>
+                                <p class="card-title">Années d'experience</p>
+                                <h2 class="info-number">15+ ans</h2>
+                                <p class="info-text">
+                                    À la croisée de l'innovation, de l'éducation, de l'entrepreneuriat
+                                    social et du développement communautaire.
+                                </p>
+                        </div>
                         </div>
                 </div>
             </div>
             </div>
         </div>
+
     </section>
 
    <section class="vision-section">
@@ -188,7 +193,7 @@
     </div>
     </div>
     
-</section>
+    </section>
 
 
     <section class="section-container">
@@ -471,21 +476,16 @@
     </div>
 </section>
 
-<footer class="footer py-3" style="background-color: #0b1a3d; border-top: 1px solid #1e3a8a; color: white;">
-    <div class="container">
-        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
-            
-            <small class="text-muted" style="color: #a8b0c0 !important;">
-                Juste-Cœur Beaubrun © 2025. Tous droits réservés.
-            </small>
+<!-- ================== FOOTER ================== -->
+  <footer class="footer">
+    <p class="text-dark">© 2025 Juste-Cœur Beaubrun. Tous droits réservés.</p>
 
-            <div>
-                <a href="#" class="text-decoration-none me-3" style="color: #a8b0c0;">Mentions légales</a>
-                <a href="#" class="text-decoration-none" style="color: #a8b0c0;">Politique de confidentialité</a>
-            </div>
-        </div>
+    <div class="footer-links">
+      <a href="#">Mentions légales</a>
+      <a href="#">Politique de confidentialité</a>
     </div>
-</footer>
+  </footer> 
+
 
     <script>
         const accordions = document.querySelectorAll('.accordion-btn');
