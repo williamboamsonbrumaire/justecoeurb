@@ -1,10 +1,16 @@
 /**************** extend css start ****************/
 /**************** extend css start ****************/
 /**************** common css start ****************/
-@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+>
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 /* line 3, /Applications/MAMP/htdocs/palash/cl/july 2019/july/195 Resume/195 resume html/sass/_common.scss */
 body {
-  font-family: "Montserrat", sans-serif;
+   font-family: "Barlow", sans-serif;
+  font-weight: 100;
+  font-style: normal;
   padding: 0;
   margin: 0;
   font-size: 14px;
@@ -132,12 +138,15 @@ a:hover {
 /* line 73, /Applications/MAMP/htdocs/palash/cl/july 2019/july/195 Resume/195 resume html/sass/_common.scss */
 h1, h2, h3, h4, h5, h6 {
   color: #0a0b4d;
-  font-family: "Montserrat", sans-serif;
+ font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
 }
 
 /* line 77, /Applications/MAMP/htdocs/palash/cl/july 2019/july/195 Resume/195 resume html/sass/_common.scss */
 p {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Barlow", sans-serif;
   line-height: 28px;
   font-size: 15px;
   margin-bottom: 0px;
@@ -544,7 +553,7 @@ ul {
   text-transform: capitalize;
   color: #ea5267;
   border: 1px solid #ea5267;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Barlow", sans-serif;
 }
 
 /* line 69, /Applications/MAMP/htdocs/palash/cl/july 2019/july/195 Resume/195 resume html/sass/_button.scss */
@@ -2160,6 +2169,7 @@ ul {
   top: 0;
   left: 0;
   z-index: 999;
+ 
 }
 
 /* SOCIAL ICONS */
@@ -2186,26 +2196,42 @@ ul {
 /* NAVBAR */
 .main_menu .navbar {
   padding: 0px;
+   display: flex;
+  justify-content: space-between;
 }
 /* logo */
+
 .main_menu .logo h3 {
    color: #0066FF;
-  font-size: 18px;
+   font-family: "Raleway", sans-serif;
+  font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
 }
-.main_menu .logo h3 span{
-  color: #0066FF;
+.main_menu .logo small {
+   color: #0066FF;
+  font-size: 8.5px;
+  font-weight: 400;
+  font-family: "barlow", sans-serif;
+  margin-left: 10px;
+  text-transform: uppercase;
 }
 
+
 /* LINKS */
+.main_menu .main-menu-item ul {
+  margin-left: 223px;
+ 
+  
+}
 .main_menu .main-menu-item ul li .nav-link {
   color: #000;
   font-size: 16px;
-  padding: 38px 25px;
-  font-family: "Montserrat", sans-serif;
+  padding: 38px 15px;
+  font-family:  "Raleway", sans-serif;
+ 
   text-transform: capitalize;
-  line-height: 12px;
+  line-height: 5px;
 }
 .main_menu .main-menu-item ul li .nav-link:hover {
   color: #0066FF;
@@ -2225,7 +2251,11 @@ ul {
 
 
 /* Cible les liens de menu */
-.menu_fixed .main-menu .navbar-brand .logo h3 {
+.menu_fixed a h3 {
+    /* Le texte devient blanc pour contraster avec le fond bleu foncé #0a0b4d */
+    color: #fff !important; 
+}
+.menu_fixed a small {
     /* Le texte devient blanc pour contraster avec le fond bleu foncé #0a0b4d */
     color: #fff !important; 
 }
@@ -2410,13 +2440,11 @@ ul {
 /*  */
 /* --- HEADER --- */
 
-/* .btn-invite {
-    background: #2d7dff;
+ .btn-invite {
+    background: #2d7dff !important;
     color: white;
-    padding: 10px 22px;
-    border-radius: 30px;
-    font-weight: 600;
-} */
+   
+} 
 
 
 
@@ -2428,6 +2456,7 @@ ul {
     padding: 20px 90px;
     color: white;
     position: relative;
+    font-family: 'Barlow', sans-serif;
     overflow: visible;
     padding-bottom: 8rem;
 }
@@ -2444,14 +2473,18 @@ ul {
 }
 
 .hero-blue h1 {
-    font-size: 28px;
-    font-weight: 700;
+    font-size: 43px;
+    font-weight: 600;
     line-height: 1.2;
     color: #f1f1f1;
+    font-family: 'Raleway', sans-serif !important;
 }
 
 .hero-blue h1 span {
     color: #4da3ff;
+}
+.hero-blue p {
+    font-family: "Barlow", sans-serif !important;
 }
 
 .hero-blue .btn-primary {
@@ -2485,10 +2518,10 @@ ul {
     position: absolute;
     top: 13%;
     right: 0;
-    left: 50%;
+    left: 47%;
     bottom: -80px;
     width: 80%;
-    max-width: 605px;
+    max-width: 705px;
     width: 1000px;
     height:auto;
     z-index: 3;
@@ -2539,6 +2572,11 @@ ul {
 
 /* Timeline */
 
+.timeline-section{
+  position: relative;
+  margin-top: 20px;
+  z-index: 5;
+}
 .timeline-box{
   margin-top: 20px;
 }
@@ -2565,6 +2603,7 @@ ul {
     width: 200px; /* C'est la ligne elle-même */
     height: 2px;
     background: #3B82F6;
+    box-shadow: 0 0 15px rgba(59,130,246,0.4);
 
     /* --- Ajout de la flèche --- */
     
@@ -2665,8 +2704,34 @@ ul {
 .mission-card {
     background: #121212;
     border-radius: 20px;
+    font-family:  "Barlow", sans-serif;
     padding: auto;
     height: 480px;
+    /*  */
+}
+.mission-card span {
+    
+    font-family:  "Raleway", sans-serif;
+    font-size: 10px;
+    font-weight: 1000;
+    color: #6B7280;
+    
+    /*  */
+}
+.mission-card h3 {
+    
+    font-family:  "Raleway", sans-serif;
+    font-size: 27px;
+    font-weight: 800;
+    
+    /*  */
+}
+.mission-card p{
+    
+    font-family:  "Barlow-serif", sans-serif;
+    font-size: 15px;
+    font-weight: 300
+    
     /*  */
 }
 
@@ -2694,6 +2759,8 @@ ul {
 .projects h2 {
   font-size: 36px;
   margin-bottom: 15px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
 }
 
 .subtitle {
@@ -2705,7 +2772,7 @@ ul {
 
 .explore {
   display: inline-block;
-  color: #2563eb;
+  color: #ffffff !important;
   text-decoration: none;
   margin-bottom: 50px;
   font-weight: bold;
@@ -2728,6 +2795,7 @@ ul {
 .card h3 {
   font-size: 18px;
   margin-bottom: 10px;
+  color: #002244;
 }
 
 .card p {
@@ -2773,6 +2841,8 @@ ul {
 .contact-text h2 {
   font-size: 34px;
   margin: 15px 0;
+  font-family: "Raleway", sans-serif;
+  font-weight: 990px;
 }
 
 .contact-text p {
@@ -3091,7 +3161,7 @@ ul {
     padding: 40px 0;
     max-width: 1200px; /* Limiter la largeur maximale */
     margin: 0 auto;
-    font-family: Arial, sans-serif; /* Exemple de police */
+    font-family: "Raleway", sans-serif; /* Exemple de police */
     color: #333;
 }
 
@@ -3109,11 +3179,13 @@ ul {
     font-size: 2.5em;
     font-weight: bold;
     margin-bottom: 10px;
+    font-family: "Raleway", sans-serif;
 }
 
 .actualites-reflections p {
     font-size: 1.1em;
     color: #666;
+    font-family: "Barlow", sans-serif;
 }
 
 .view-all {
@@ -3411,7 +3483,7 @@ ul {
     background: #0d1124;
     padding: 80px 0;
     color: #fff;
-    font-family: "Inter", sans-serif;
+    font-family: "Raleway", sans-serif;
 }
 
 .contact-section .container {
@@ -3614,7 +3686,7 @@ ul {
 /* line 122, /Applications/MAMP/htdocs/palash/cl/july 2019/july/195 Resume/195 resume html/sass/_banner.scss */
 .More_About_Us {
   font-size: 16px;
-  font-family: "Cardo";
+  font-family: "Raleway", sans-serif;
   color: white;
   line-height: 1.75;
   text-align: center;
@@ -4053,7 +4125,7 @@ ul {
 
 /* line 46, /Applications/MAMP/htdocs/palash/cl/july 2019/july/195 Resume/195 resume html/sass/_review.scss */
 .review_part .client_review_single .client_review_text h4 span {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Barlow", sans-serif;
   font-size: 14px;
   color: #555555;
 }
@@ -5861,7 +5933,7 @@ h6 {
 /* 1 */
 /* Styles de la section d'en-tête */
 .profile-header-section {
-    font-family: Arial, sans-serif;
+    font-family: "Raleway", sans-serif;
     padding-top: 20px;
     text-align: center;
     background-color: #f7f9fc; /* Fond clair au-dessus de la barre bleue */
@@ -6081,7 +6153,7 @@ h6 {
 /* Styles généraux pour la section et le contexte */
 .profile-details-section {
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: "Raleway", sans-serif;
 }
 
 .dark-background-area {
@@ -6262,7 +6334,7 @@ h6 {
 
 .vision-section {
     padding: 60px 0;
-    font-family: "Inter", sans-serif;
+    font-family: "Raleway", sans-serif;
 }
 
 .vision-container {
@@ -6341,6 +6413,7 @@ h6 {
 
 .section-container {
     width: 100%;
+    padding-top: 100px;
   
     
 }
@@ -6348,7 +6421,7 @@ h6 {
 .section-title {
     font-size: 1.4rem;
     font-weight: 700;
-    margin-bottom: 10px;
+    margin-bottom: 20px 10px;
     color: #1E3A8A;
 }
 
@@ -6777,14 +6850,6 @@ h6 {
   }
 }
 
-/* CTA Project */
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Inter, Arial, sans-serif;
-}
 
 /* ================== CTA SECTION ================== */
 .cta-section {
@@ -6804,6 +6869,7 @@ h6 {
 .cta-content h2 {
   color: white;
   font-size: 42px;
+  font-family: "Raleway", sans-serif;
   margin-bottom: 20px;
   font-weight: 700;
 }
@@ -6811,6 +6877,7 @@ h6 {
 .cta-content p {
   color: rgba(255,255,255,0.75);
   font-size: 18px;
+  font-family: "Barlow", sans-serif;
   line-height: 1.7;
   margin-bottom: 40px;
 }
@@ -6834,8 +6901,8 @@ h6 {
 }
 
 .btn-primary {
-  background: white;
-  color: #0a0f23;
+  background: #0066FF;
+  color: #f1f1f1;
   border: none;
 }
 
@@ -6849,10 +6916,7 @@ h6 {
   border: none;
 }
 
-.btn-primary:hover {
-  background: #0a0b4d;
-  transform: translateY(-2px);
-}
+
 
 .btn-outline {
   border: 1.5px solid rgba(255,255,255,0.4);
@@ -6874,6 +6938,7 @@ h6 {
   align-items: center;
   color: #7a808a;
   font-size: 14px;
+  font-family: "Barlow", sans-serif;
   flex-wrap: wrap;
   gap: 15px;
 }
