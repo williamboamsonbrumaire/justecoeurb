@@ -2330,6 +2330,12 @@ ul {
   .main_menu .main-menu-item ul li .nav-link {
     padding: 35px 20px;
   }
+
+  .main_menu .main-menu-item ul {
+  margin-left: 0;
+ 
+  
+}
 }
 
 /* SMALL DEVICES (max 991px) */
