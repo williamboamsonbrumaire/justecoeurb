@@ -41,3 +41,39 @@ function nextTestimonial() {
 function prevTestimonial() {
     updateTestimonial(currentIndex - 1);
 }
+
+
+  
+        const accordions = document.querySelectorAll('.accordion-btn');
+
+        accordions.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const content = btn.nextElementSibling;
+                const icon = btn.querySelector('.icon');
+
+                content.classList.toggle('open');
+                icon.textContent = content.classList.contains('open') ? "-" : "+";
+            });
+        });
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+    // 1. Sélectionner tous les liens qui pointent vers un # (ancrage interne)
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault(); // Empêcher l'action par défaut (défilement instantané)
+
+            // 2. Trouver la cible de l'ancre (en utilisant l'ID dans le href)
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+
+            if (targetElement) {
+                // 3. Demander au navigateur de faire défiler jusqu'à la cible
+                targetElement.scrollIntoView({
+                    behavior: 'smooth', // Défilement fluide
+                    block: 'start'      // Aligner la cible en haut de la fenêtre
+                });
+            }
+        });
+    });
+});

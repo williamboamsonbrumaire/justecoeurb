@@ -2226,19 +2226,15 @@ ul {
   text-transform: uppercase;
 }
 
-
 /* LINKS */
 .main_menu .main-menu-item ul {
   margin-left: 223px;
- 
-  
 }
 .main_menu .main-menu-item ul li .nav-link {
   color: #000;
   font-size: 16px;
   padding: 38px 15px;
   font-family:  "Raleway", sans-serif;
- 
   text-transform: capitalize;
   line-height: 5px;
 }
@@ -2276,6 +2272,12 @@ ul {
     /* Le texte devient blanc pour contraster avec le fond bleu foncé #0a0b4d */
     color: #fff; 
 }
+.menu_fixed .main_menu .main-menu-item ul {
+    
+  margin-left:0;
+
+}
+
 
 /* Cible la couleur des icônes de menu (burger, etc.) */
 .menu_fixed .menu_icon i {
@@ -2341,11 +2343,9 @@ ul {
     padding: 35px 20px;
   }
 
-  .main_menu .main-menu-item ul {
-  margin-left: 0;
- 
   
-}
+
+  
 }
 
 /* SMALL DEVICES (max 991px) */
@@ -2354,6 +2354,12 @@ ul {
   .main_menu {
     padding: 20px 0px;
   }
+
+  .main_menu .main-menu-item ul {
+  margin-left: 0;
+ 
+  
+}
 
   .home_menu .main-menu-item {
     padding-left: 0px;
@@ -2904,7 +2910,7 @@ ul {
 .contact-image img {
   width: 100%;
   height: 100%;
- border-radius: 47px 0 0 47px;
+ /* border-radius: 47px 0 0 47px; */
   object-fit: cover;
 }
 
@@ -3345,6 +3351,12 @@ ul {
     color: #777;
     font-family: "Barlow", sans-serif;
     font-weight: 400;
+}
+
+.actualites-reflections .card a{
+  text-decoration: none;
+  color: #f1f1f1;
+  font-family: "Barlow", sans-serif;
 }
 
 /* Étiquettes (tags) */
@@ -6636,7 +6648,7 @@ h6 {
 /* About 4 end */
 
 .programmes {
-  padding: 100px 5%;
+  padding: 40px 5%;
   background: #f4f7fb;
 }
 
@@ -6653,6 +6665,7 @@ h6 {
 .tag {
   color: #2f60ff;
   font-weight: bold;
+  font-family: "Barlow", sans-serif;
   margin-bottom: 10px;
   display: inline-block;
 }
@@ -6661,6 +6674,9 @@ h6 {
   font-size: 48px;
   line-height: 1.2;
   margin-bottom: 25px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+
 }
 
 .content h1 span {
@@ -6671,6 +6687,8 @@ h6 {
   font-size: 16px;
   color: #444;
   margin-bottom: 15px;
+  font-family: "Barlow", sans-serif;
+  font-weight: 500;
   line-height: 1.7;
 }
 
@@ -6795,8 +6813,10 @@ h6 {
 }
 
 .stats-intro-text {
-    color: #8c98ad; /* Couleur gris clair pour le texte d'intro */
+    color: #5384d9; /* Couleur gris clair pour le texte d'intro */
     font-size: 0.85rem;
+    font-family: "Barlow", sans-serif;
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 50px; /* Espace sous le texte d'intro */
@@ -6805,7 +6825,7 @@ h6 {
 
 
 .stat-item {
-    padding: 20px;
+    padding: 20px 55px;
     
     /* Ajustez l'espacement entre les blocs si nécessaire, ici Bootstrap `col-md-4` le gère */
 }
@@ -6813,15 +6833,25 @@ h6 {
 .stat-number {
     font-size: 3.5rem; /* Grande taille pour les chiffres */
     font-weight: 700; /* Gras */
+    font-family:"Raleway", sans-serif;
     color: #007bff; /* Couleur bleue d'accentuation pour les chiffres */
     margin-bottom: 10px;
     line-height: 1.2;
+    text-align: start;
+} 
+
+.stat-description span {
+    color: #007bff; /* Couleur bleue d'accentuation pour les mots clés */
+    font-weight: 700;
 }
 
 .stat-description {
     font-size: 1rem;
     color: #c0c9d6; /* Couleur gris clair pour les descriptions */
     line-height: 1.6;
+    font-family: "Barlow", sans-serif;
+    text-align: start;
+    font-weight: 500;
     max-width: 280px; /* Limite la largeur du texte pour éviter qu'il ne s'étire trop */
     margin-left: auto;
     margin-right: auto; /* Centrer le paragraphe dans son conteneur */
@@ -6856,12 +6886,16 @@ h6 {
 
 .projects h2 {
   font-size: 34px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
   color: #0b1c36;
   margin-bottom: 5px;
 }
 
 .subtitle {
   color: #555;
+  font-family: "Barlow", sans-serif;
+  font-weight: 500;
   margin-bottom: 30px;
 }
 
@@ -6876,6 +6910,7 @@ h6 {
   padding: 10px 18px;
   border-radius: 20px;
   border: none;
+  font-family: "Barlow", sans-serif;
   background: #e9efff;
   cursor: pointer;
   font-size: 14px;
@@ -6891,6 +6926,27 @@ h6 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 25px;
+}
+
+/* Style pour le bouton actif (exemple) */
+.filters button.active {
+    background-color: #007bff; /* Couleur de votre choix */
+    color: white;
+    border: 1px solid #007bff;
+}
+
+/* Style de base pour les boutons inactifs */
+.filters button {
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    /* Ajoutez ici votre style de bouton par défaut */
+}
+
+/* Style pour la grille, si vous voulez des colonnes */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px; /* Espace entre les cartes */
 }
 
 /* CARD */
@@ -6909,10 +6965,14 @@ h6 {
 .project-card h3 {
   margin: 15px 0;
   color: #101828;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
 }
 
 .project-card p {
+  font-family: "Barlow", sans-serif;
   font-size: 15px;
+  text-align: start;
   line-height: 1.6;
   color: #555;
 }
