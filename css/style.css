@@ -218,8 +218,10 @@ a:focus, .button:focus, button:focus, .btn:focus {
 }
 
 /* line 134, /Applications/MAMP/htdocs/palash/cl/july 2019/july/195 Resume/195 resume html/sass/_common.scss */
-.section_tittle {
+.section_title {
   margin-bottom: 76px;
+  margin-top: 40px;
+  border: 2px soli #000;
 }
 
 @media (max-width: 991px) {
@@ -2572,6 +2574,23 @@ ul {
 
 /* Timeline */
 
+/* État initial : caché */
+/* --- CODE CSS À VÉRIFIER --- */
+.timeline-hidden {
+    /* 1. État initial : Complètement transparent */
+    opacity: 0;
+    
+    /* 2. État initial : Décalé vers la droite (par exemple 50px) */
+    transform: translateX(50px); 
+    
+    /* 3. Transition : C'est ce qui fait la magie ! */
+    /* Sans cette ligne, l'effet est instantané (pas d'animation) */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* État final (déjà géré par la suppression de .timeline-hidden en JS) */
+/* Les éléments reprendront leur style par défaut (opacity: 1, transform: none) */
+
 .timeline-section{
   position: relative;
   margin-top: 20px;
@@ -2815,7 +2834,7 @@ ul {
 ============================ */
 .contact-section {
   padding: 80px 20px;
-}
+  margin-bottom: 30px;}
 
 .contact-box {
   max-width: 1200px;
@@ -2863,7 +2882,6 @@ ul {
 ============================ */
 .contact-image {
   width: 50%;
- 
   position: relative;
 }
 
@@ -2986,6 +3004,18 @@ ul {
         animation-duration: 25s; 
     }
 }
+.service_part h2 {
+    font-size: 30px;
+    margin-top: 15px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+
+}
+.service_part h2 {
+    font-size: 30px;
+    font-family: "Barlow", sans-serif;
+
+}
 
 /*  */
 
@@ -2998,10 +3028,13 @@ ul {
 .testimonials-container {
   max-width: 1200px;
   margin: auto;
+  padding: 0px 40px         ;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
+
 
 /* TEXTE */
 .testimonials-text {
@@ -3054,19 +3087,32 @@ ul {
 }
 
 .controls button {
-  width: 48px;
+  /* width: 48px;
   height: 48px;
   border-radius: 50%;
   border: 1px solid #333;
   background: transparent;
-  font-size: 20px;
+  font-size: 30px;
   cursor: pointer;
+  padding: 0;
   margin-right: 10px;
-  transition: 0.3s;
+  transition: 0.3s; */
+
+  background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    
+    align-items: center;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.2s, border-color 0.2s;
 }
 
 .controls button:hover {
-  background: #000;
+  background: #0066ff;
   color: #fff;
 }
 
@@ -3075,10 +3121,7 @@ ul {
   width: 35%;
   display: flex;
   justify-content: center;
-  border-bottom-left-radius: 0;
- border-top-left-radius: 50px;
- border-bottom-right-radius: 50px;
- border-top-left-radius: 50px;
+  
 }
 
 .testimonials-image img {
@@ -3147,11 +3190,30 @@ ul {
   color: #fff;
   text-align: center;
 }
+.quote-section h3{
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #0066ff;
+  margin-bottom: 0;
+}
 
 .quote-section p {
-  max-width: 900px;
+  max-width: 730px;
   margin: auto;
+  font-family: "Barlow", sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.7;
+}
+.quote-section p span {
+  max-width: 730px;
+  margin: auto;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
   font-size: 22px;
+  color: #d8dee5;
   line-height: 1.7;
 }
 
@@ -3162,7 +3224,7 @@ ul {
     max-width: 1200px; /* Limiter la largeur maximale */
     margin: 0 auto;
     font-family: "Raleway", sans-serif; /* Exemple de police */
-    color: #333;
+   ;
 }
 
 /* En-tête de la section (Actualités et réflexions) */
@@ -3180,6 +3242,7 @@ ul {
     font-weight: bold;
     margin-bottom: 10px;
     font-family: "Raleway", sans-serif;
+    font-weight: 650;
 }
 
 .actualites-reflections p {
@@ -3188,18 +3251,18 @@ ul {
     font-family: "Barlow", sans-serif;
 }
 
-.view-all {
+.actualites-reflections .view-all {
     color: #007bff; /* Couleur du lien (bleu) */
     text-decoration: none;
     font-weight: 600;
     padding-bottom: 5px;
     border-bottom: 1px solid transparent;
-    transition: border-bottom 0.2s;
+    transition: 0.2s;
     white-space: nowrap; /* Empêche le saut de ligne sur mobile */
 }
 
 /* Conteneur de carrousel (pour l'alignement et les flèches) */
-.carousel-container {
+.actualites-reflections .carousel-container {
     display: flex;
     align-items: center;
     position: relative; /* Pour positionner les flèches */
@@ -3207,7 +3270,7 @@ ul {
 }
 
 /* Wrapper des cartes (où le défilement se produit) */
-.cards-wrapper {
+.actualites-reflections .cards-wrapper {
     display: flex;
     overflow-x: auto; /* Permet le défilement horizontal */
     scroll-snap-type: x mandatory; /* Ajoute un "clic" agréable lors du défilement */
@@ -3219,12 +3282,12 @@ ul {
 }
 
 /* Masquer la barre de défilement pour les navigateurs basés sur Webkit */
-.cards-wrapper::-webkit-scrollbar {
+.actualites-reflections .cards-wrapper::-webkit-scrollbar {
     display: none;
 }
 
 /* Style de chaque carte */
-.card {
+.actualites-reflections .card {
     min-width: 300px; /* Largeur de la carte visible */
     flex: 0 0 auto;
     background-color: #fff;
@@ -3233,13 +3296,14 @@ ul {
     overflow: hidden;
     scroll-snap-align: start; /* S'aligner au début de chaque carte */
     transition: transform 0.3s;
+    padding: 0 !important;
 }
 
-.card:hover {
+.actualites-reflections .card:hover {
     transform: translateY(-5px);
 }
 
-.image-placeholder {
+.actualites-reflections .image-placeholder {
     width: 100%;
     height: 180px;
     background-color: #f0f0f0;
@@ -3247,23 +3311,28 @@ ul {
     background-position: center;
 }
 
-.card .content {
+.actualites-reflections .card .content {
     padding: 15px;
 }
 
-.card h3 {
+.actualites-reflections .card h3 {
     font-size: 1.25em;
     margin: 5px 0 10px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 750;
     line-height: 1.4;
+    color: #444;
 }
 
-.card p {
+.actualites-reflections .card p {
     font-size: 0.9em;
     color: #777;
+    font-family: "Barlow", sans-serif;
+    font-weight: 400;
 }
 
 /* Étiquettes (tags) */
-.tag {
+.actualites-reflections .tag {
     display: inline-block;
     padding: 4px 10px;
     border-radius: 4px;
@@ -3272,23 +3341,23 @@ ul {
     text-transform: uppercase;
 }
 
-.tag-reflexion {
+.actualites-reflections .tag-reflexion {
     background-color: #e0f7fa;
     color: #00bcd4;
 }
 
-.tag-programme {
+.actualites-reflections .tag-programme {
     background-color: #fff3e0;
     color: #ff9800;
 }
 
-.tag-leadership {
+.actualites-reflections .tag-leadership {
     background-color: #e8eaf6;
     color: #3f51b5;
 }
 
 /* Contrôles de navigation (flèches) */
-.navigation-controls {
+.actualites-reflections .navigation-controls {
     display: flex;
     align-self: flex-end; /* Aligner les contrôles avec la ligne "Voir tous les articles" */
     margin-left: 20px; /* Espacement entre le texte et les flèches */
@@ -3297,7 +3366,7 @@ ul {
     left: 20px;
 }
 
-.nav-button {
+.actualites-reflections .nav-button {
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 50%;
@@ -3311,15 +3380,16 @@ ul {
     transition: background-color 0.2s, border-color 0.2s;
 }
 
-.nav-button:hover {
+.actualites-reflections .nav-button:hover {
     background-color: #f0f0f0;
     border-color: #999;
 }
 
-.nav-button svg {
-    width: 18px;
-    height: 18px;
+.actualites-reflections .nav-button svg {
+    width: 24px;
+    height: 24px;
     color: #333;
+   
 }
 
 /* Ajustements pour la disposition mobile */
@@ -3791,7 +3861,7 @@ ul {
   background-color: #fff;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  border: 1px solid transparent;
+  border: 1px solid #000 transparent;
 }
 
 @media (max-width: 991px) {
@@ -3824,6 +3894,8 @@ ul {
 .service_part .single_service_part .single_service_text h2 {
   font-size: 18px;
   text-transform: capitalize;
+  font-family: "Barlow", sans-serif;
+  font-size: 1300;
   margin-top: 34px;
   margin-bottom: 17px;
 }
@@ -3859,6 +3931,7 @@ ul {
 /* line 51, /Applications/MAMP/htdocs/palash/cl/july 2019/july/195 Resume/195 resume html/sass/_service.scss */
 .service_part .single_service_part .single_service_text p {
   list-style: 1.8;
+  font-family: "Barlow", sans-serif;
   color: #777777;
 }
 
@@ -6421,7 +6494,6 @@ h6 {
 .section-title {
     font-size: 1.4rem;
     font-weight: 700;
-    margin-bottom: 20px 10px;
     color: #1E3A8A;
 }
 
