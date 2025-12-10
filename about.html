@@ -71,19 +71,21 @@
     <section class="profile-header-section">
 
         <div class="profile-navigation mt-5">
-            <button class="btn btn-primary mt-3 px-4 py-2">BIOGRAPHIE</button>
-            <button class="btn btn-primary mt-3 px-4 py-2">VISION</button>
-            <button class="btn btn-primary mt-3 px-4 py-2 active">PARCOURS</button>
+            <a href="#biographie" class="btn btn-primary mt-3 px-4 py-2">BIOGRAPHIE</a>
+            <a href="#vision" class="btn btn-primary mt-3 px-4 py-2">VISION</a>
+            <a href="#parcours" class="btn btn-primary mt-3 px-4 py-2 active">PARCOURS</a>
+
+           
         </div>
 
         <div class="main-content-area d-flex justify-content-center align-items-center gap-4 flex-wrap">
             <div class="text-intro col-lg-6">
-                <h1>Comprendre le parcours de Juste-Cœur Beaubrun</h1>
+                <h1>Comprendre le parcours <span>de Juste-Cœur Beaubrun</span> </h1>
                 <p>De Bivouac, dans le Nord-Ouest d'Haïti, aux programmes internationaux pour la jeunesse, Juste-Cœur a construit des ponts entre territoires, institutions et talents. Son parcours mêle engagement communautaire, entrepreneuriat social et leadership inclusif.</p>
             </div>
         </div>
 
-        <div class="dark-info-area ">
+        <div id="biographie" class="dark-info-area ">
             <div class="container">
                 <div class="info-layout-wrapper  row">
                     <div class="cards-column col-lg-5">
@@ -122,8 +124,6 @@
                                 <h3>Juste-Cœur grandit à Bivouac, localité de Môle Saint-Nicolas: un territoire qui lui rappelle chaque jour pourquoi il travaille pour les jeunes et les communautés.</h3>
                                 <p>Le décalage entre le potentiel des jeunes et les ressources et l’accès nourrit...</p>
                             </div>
-                       
-
                     </div>
                     
                     <div class="image-column col-lg-7">
@@ -146,56 +146,54 @@
 
     </section>
 
-   <section class="vision-section">
-    <div class="container">
-        <div class=" vision-container">
+    <section id="vision" class="vision-section">
+        <div class="container">
+            <div class=" vision-container">
+            <!-- Texte de gauche -->
+            <div class="vision-text">
+                <h2><span>Vision</span> et valeurs</h2>
+                <p>
+                    La vision de Banj, c’est une société où les jeunes ne sont pas limités par leur environnement. 
+                    Où ils peuvent innover et créer un avenir meilleur pour eux et pour leurs communautés. 
+                    Notre travail consiste à fournir des espaces, des formations et des accompagnements afin de créer 
+                    des situations qui rendent cette vision possible.
+                </p>
 
-        <!-- Texte de gauche -->
-        <div class="vision-text">
-            <h2><span>Vision</span> et valeurs</h2>
-            <p>
-                La vision de Banj, c’est une société où les jeunes ne sont pas limités par leur environnement. 
-                Où ils peuvent innover et créer un avenir meilleur pour eux et pour leurs communautés. 
-                Notre travail consiste à fournir des espaces, des formations et des accompagnements afin de créer 
-                des situations qui rendent cette vision possible.
-            </p>
+                <p>
+                    Au fil des années, la manière dont nous servons les jeunes a évolué, mais les valeurs qui nous guident 
+                    demeurent les mêmes. Elles influencent chaque décision et définissent les actions que nous entreprenons.
+                </p>
+            </div>
 
-            <p>
-                Au fil des années, la manière dont nous servons les jeunes a évolué, mais les valeurs qui nous guident 
-                demeurent les mêmes. Elles influencent chaque décision et définissent les actions que nous entreprenons.
-            </p>
+            <!-- Cartes de valeurs -->
+            <div class="vision-cards">
+
+                <div class="v-card">
+                    <h3>Leaders d’Espaces Libres</h3>
+                    <p>Créer des espaces où les talents, les passions et le potentiel peuvent s’exprimer librement.</p>
+                </div>
+
+                <div class="v-card">
+                    <h3>Innovation Sociale</h3>
+                    <p>Encourager des solutions innovantes pour des réalités sociales diverses et complexes.</p>
+                </div>
+
+                <div class="v-card">
+                    <h3>Responsabilité & Intégrité</h3>
+                    <p>Promouvoir la transparence, le respect et des comportements éthiques dans toutes nos actions.</p>
+                </div>
+
+                <div class="v-card">
+                    <h3>Éducation & Transmission</h3>
+                    <p>Rendre les savoirs plus accessibles pour permettre l'autonomisation des jeunes.</p>
+                </div>
+            </div>
         </div>
-
-        <!-- Cartes de valeurs -->
-        <div class="vision-cards">
-
-            <div class="v-card">
-                <h3>Leaders d’Espaces Libres</h3>
-                <p>Créer des espaces où les talents, les passions et le potentiel peuvent s’exprimer librement.</p>
-            </div>
-
-            <div class="v-card">
-                <h3>Innovation Sociale</h3>
-                <p>Encourager des solutions innovantes pour des réalités sociales diverses et complexes.</p>
-            </div>
-
-            <div class="v-card">
-                <h3>Responsabilité & Intégrité</h3>
-                <p>Promouvoir la transparence, le respect et des comportements éthiques dans toutes nos actions.</p>
-            </div>
-
-            <div class="v-card">
-                <h3>Éducation & Transmission</h3>
-                <p>Rendre les savoirs plus accessibles pour permettre l'autonomisation des jeunes.</p>
-            </div>
         </div>
-    </div>
-    </div>
-    
     </section>
 
 
-    <section class="section-container">
+    <section id="parcours" class="section-container">
         <div class="container">
              <h2 class="section-title">Parcours académique</h2>
             <p class="section-subtitle">
@@ -212,7 +210,8 @@
                     <span class="icon">+</span>
                 </button>
                 <div class="accordion-content">
-                    <p>Université Notre Dame d’Haïti. Approfondissement des concepts économiques modernes, analyse des données, gestion financière.</p>
+                    <h3>Lorem ipsum dolor sit.</h3>
+                    <p class="text-dark">Université Notre Dame d’Haïti. Approfondissement des concepts économiques modernes, analyse des données, gestion financière.</p>
                 </div>
             </div>
 
@@ -249,11 +248,11 @@
     <!-- SECTION EXPÉRIENCES PRO -->
 <section class="experiences py-5">
     <div class="container my-4">
-
         <div class="row">
-            <div class="col-12 text-center mb-5">
+            <div class="col-12 text-center mb-5 d-flex flex-column align-items-center">
                 <h2 class="display-6 fw-bold exp-section-title">Expériences professionnelles</h2>
-                <p class="lead text-muted exp-section-subtitle">
+
+                <p class="lead text-muted exp-section-subtitle col-lg-7 text-center">
                     Juste-Cœur évolue à la fois dans les organisations locales, les réseaux 
                     internationaux et les écosystèmes d'innovation.
                 </p>
@@ -262,8 +261,8 @@
 
         <div class="row justify-content-center g-4">
 
-            <div class="col-md-6 ">
-                <div class="exp-card h-100 p-4 shadow-sm border-0 bg-white">
+            <div class="col-lg-6 mt-3 col-md-12">
+                <div class="v-card  h-100 p-4 shadow-sm border-0 bg-white">
                     <div class="exp-card-body">
                         <h4 class="exp-card-subtitle text-uppercase fw-bold mb-1" style="font-size: 0.8rem; color: #6c757d;">BANJ LAB</h4>
                         
@@ -280,8 +279,8 @@
                 </div>
             </div>
 
-            <div class="col-md-6 ">
-                <div class="exp-card h-100 p-4 shadow-sm border-0 bg-white">
+            <div class="col-lg-6 mt-3 col-md-12 ">
+                <div class="v-card  h-100 p-4 shadow-sm border-0 bg-white">
                     <div class="exp-card-body">
                         <h4 class="exp-card-subtitle text-uppercase fw-bold mb-1" style="font-size: 0.8rem; color: #6c757d;">PROGRAMME DE LEADERSHIP ET D'ENTREPRENEURIAT SCOLAIRE (PLES)</h4>
                         
@@ -297,8 +296,8 @@
                 </div>
             </div>
 
-            <div class="col-md-6 ">
-                <div class="exp-card h-100 p-4 shadow-sm border-0 bg-white">
+            <div class=" col-lg-6 mt-3 col-md-12">
+                <div class="v-card h-100 p-4 shadow-sm border-0 bg-white">
                     <div class="exp-card-body">
                         <h4 class="exp-card-subtitle text-uppercase fw-bold mb-1" style="font-size: 0.8rem; color: #6c757d;">ORGANISATIONS PARTENAIRES</h4>
                         
@@ -314,8 +313,8 @@
                 </div>
             </div>
 
-            <div class="col-md-6 ">
-                <div class="exp-card h-100 p-4 shadow-sm border-0 bg-white">
+            <div class=" col-lg-6 mt-3 col-md-12">
+                <div class="v-card h-100 p-4 shadow-sm border-0 bg-white">
                     <div class="exp-card-body">
                         <h4 class="exp-card-subtitle text-uppercase fw-bold mb-1" style="font-size: 0.8rem; color: #6c757d;">RÉSEAUX ET UNIVERSITÉS (Écosystème)</h4>
                         
@@ -339,7 +338,7 @@
     <div class="container my-5">
         <div class="row mb-5">
             <div class="col-lg-7 col-md-12 mb-4 mb-lg-0">
-                <h2 class="display-5 fw-bold mb-3" style="color: #007bff;">Engagement communautaire et leadership</h2>
+                <h2 class="display-5 fw-bold mb-3">Engagement communautaire et leadership</h2>
                 <p class="lead text-muted mb-4">
                     Au-delà de ses fonctions professionnelles, Juste-Cœur consacre une grande partie de 
                     son temps à des initiatives citoyennes, à des réseaux de jeunes et à des espaces de 
@@ -396,16 +395,59 @@
         <hr class="my-5">
 
         <div class="row text-center mt-5">
-            <div class="col-12">
-                <h2 class="display-6 fw-bold mb-2">Distinctions et prix</h2>
-                <p class="lead text-muted mb-5">
+            <div class="col-12 text-center mb-5 d-flex flex-column align-items-center">
+                <h2 class="display-6 fw-bold ">Distinctions et prix</h2>
+
+                <p class="lead text-muted exp-section-subtitle col-lg-7 text-center">
                     Des reconnaissances qui viennent saluer un engagement constant en faveur de la 
                     jeunesse, de la démocratie et de l’innovation.
                 </p>
             </div>
+        
+
+
         </div>
 
         <div class="row justify-content-center g-4">
+            
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 p-3 shadow-sm border-0">
+                    <div class="card-body">
+                        <h4 class="card-subtitle text-uppercase text-muted fw-bold mb-1" style="font-size: 0.8rem;">ASSOCIATION DES VOLONTAIRES POUR LA DÉMOCRATIE</h4>
+                        <h3 class="card-title h5 fw-bold mb-2" style="color: #1E3A8A;">Top 10 jeunes leaders haïtiens (2020)</h3>
+                        <p class="card-text text-muted" style="font-size: 0.9rem;">
+                            Sélection parmi des jeunes engagés dans le civisme, la 
+                            participation citoyenne et les actions sociales.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 p-3 shadow-sm border-0">
+                    <div class="card-body">
+                        <h4 class="card-subtitle text-uppercase text-muted fw-bold mb-1" style="font-size: 0.8rem;">ONE WORLD JAPAN</h4>
+                        <h3 class="card-title h5 fw-bold mb-2" style="color: #1E3A8A;">2e place mondiale - World Dream Showcase</h3>
+                        <p class="card-text text-muted" style="font-size: 0.9rem;">
+                            Reconnaissance des initiatives pour une vision de 
+                            développement portée par et pour les jeunes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 p-3 shadow-sm border-0">
+                    <div class="card-body">
+                        <h4 class="card-subtitle text-uppercase text-muted fw-bold mb-1" style="font-size: 0.8rem;">ORGANISATION INTERNATIONALE DE LA FRANCOPHONIE</h4>
+                        <h3 class="card-title h5 fw-bold mb-2" style="color: #1E3A8A;">Parlement Francophone des Jeunes</h3>
+                        <p class="card-text text-muted" style="font-size: 0.9rem;">
+                            Représentant d’Haïti au 9e Parlement, participer aux 
+                            débats et résolutions sur les enjeux jeunesse.
+                        </p>
+                    </div>
+                </div>
+            </div>
             
             <div class="col-md-6 col-lg-4">
                 <div class="card h-100 p-3 shadow-sm border-0">
@@ -456,7 +498,7 @@
         <div class="row align-items-center">
 
             <div class="col-lg-8 col-md-12 mb-4 mb-lg-0">
-                <h2 class="display-6 fw-bold mb-3">En savoir plus ou collaborer avec Juste-Cœur ?</h2>
+                <h2 class="display-6 text-white fw-bold mb-3">En savoir plus ou collaborer avec Juste-Cœur ?</h2>
                 <p class="lead text-muted" style="color: #a8b0c0 !important;">
                     Vous pouvez explorer ses projets, ses publications ou entrer directement 
                     en contact pour imaginer de nouveaux programmes au service de la 
@@ -466,9 +508,9 @@
 
             <div class="col-lg-4 col-md-12 d-flex justify-content-lg-end justify-content-start flex-wrap gap-3">
                 
-                <a href="#" class="btn btn-outline-light btn-lg px-4 rounded-3">Découvrir ses projets</a>
+                <a href="#" class="btn btn-white mt-4 px-4 py-2">Découvrir ses projets</a>
                 
-                <a href="#" class="btn btn-primary btn-lg px-4 rounded-3" style="background-color: #3b82f6; border-color: #3b82f6;">Proposer une collaboration</a>
+                <a href="#" class="mt-3 btn btn-primary mt-4 px-4 py-2">Proposer une collaboration</a>
             </div>
 
         </div>
@@ -498,6 +540,28 @@
                 icon.textContent = content.classList.contains('open') ? "-" : "+";
             });
         });
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+    // 1. Sélectionner tous les liens qui pointent vers un # (ancrage interne)
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault(); // Empêcher l'action par défaut (défilement instantané)
+
+            // 2. Trouver la cible de l'ancre (en utilisant l'ID dans le href)
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+
+            if (targetElement) {
+                // 3. Demander au navigateur de faire défiler jusqu'à la cible
+                targetElement.scrollIntoView({
+                    behavior: 'smooth', // Défilement fluide
+                    block: 'start'      // Aligner la cible en haut de la fenêtre
+                });
+            }
+        });
+    });
+});
     </script>
 
 
