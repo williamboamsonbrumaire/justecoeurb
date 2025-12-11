@@ -34,10 +34,6 @@ $('.single_service_part').hover(
   function(){$(this).removeClass('active')}
 )
 
-// $('.single_service_part').hover(function(){
-//   $('.single_service_text').removeClass('active');
-//   $('.single_service_text').addClass('active');
-// });
 
 
 

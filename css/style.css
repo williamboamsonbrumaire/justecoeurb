@@ -295,7 +295,7 @@ a:focus, .button:focus, button:focus, .btn:focus {
 
 /* line 170, /Applications/MAMP/htdocs/palash/cl/july 2019/july/195 Resume/195 resume html/sass/_common.scss */
 .section_tittle p {
-  color: #ea5267;
+  color: #0066FF;
   font-size: 15px;
   text-transform: uppercase;
   font-weight: 500;
@@ -512,7 +512,7 @@ ul {
 .btn_1 {
   display: inline-block;
   padding: 13.5px 45px;
-  background-color: #ea5267;
+  background-color: #0066FF;
   font-size: 14px;
   color: #fff;
   -o-transition: all .4s ease-in-out;
@@ -562,8 +562,8 @@ ul {
   -webkit-transition: 0.5s;
   transition: 0.5s;
   text-transform: capitalize;
-  color: #ea5267;
-  border: 1px solid #ea5267;
+  color: #0066FF;
+  border: 1px solid #0066FF;
   font-family: "Barlow", sans-serif;
 }
 
@@ -1318,7 +1318,7 @@ ul {
   left: 10px;
   display: block;
   color: #fff;
-  background-color: #ea5267;
+  background-color: #0066FF;
   padding: 8px 15px;
   border-radius: 5px;
 }
@@ -1491,7 +1491,7 @@ ul {
 
 /* line 782, /Applications/MAMP/htdocs/palash/cl/july 2019/july/195 Resume/195 resume html/sass/_blog.scss */
 .blog_right_sidebar .post_category_widget .cat-list li:hover a {
-  color: #ea5267 !important;
+  color: #0066FF !important;
 }
 
 /* line 792, /Applications/MAMP/htdocs/palash/cl/july 2019/july/195 Resume/195 resume html/sass/_blog.scss */
@@ -1511,7 +1511,7 @@ ul {
 
 /* line 808, /Applications/MAMP/htdocs/palash/cl/july 2019/july/195 Resume/195 resume html/sass/_blog.scss */
 .blog_right_sidebar .popular_post_widget .post_item .media-body a:hover {
-  color: #ea5267;
+  color: #0066FF;
 }
 
 /* line 814, /Applications/MAMP/htdocs/palash/cl/july 2019/july/195 Resume/195 resume html/sass/_blog.scss */
@@ -1546,7 +1546,7 @@ ul {
 
 /* line 842, /Applications/MAMP/htdocs/palash/cl/july 2019/july/195 Resume/195 resume html/sass/_blog.scss */
 .blog_right_sidebar .tag_cloud_widget ul li a:hover {
-  background: #ea5267 !important;
+  background: #0066FF !important;
   color: #fff !important;
 }
 
@@ -1790,7 +1790,7 @@ ul {
 
 /* line 1205, /Applications/MAMP/htdocs/palash/cl/july 2019/july/195 Resume/195 resume html/sass/_blog.scss */
 .single-post-area .blog-author a:hover {
-  color: #ea5267;
+  color: #0066FF;
 }
 
 /* line 1210, /Applications/MAMP/htdocs/palash/cl/july 2019/july/195 Resume/195 resume html/sass/_blog.scss */
@@ -2129,7 +2129,7 @@ ul {
 
 /* line 18, /Applications/MAMP/htdocs/palash/cl/july 2019/july/195 Resume/195 resume html/sass/_single_blog.scss */
 .single_blog_post .single_blog .single_appartment_content p a {
-  color: #ea5267;
+  color: #0066FF;
 }
 
 /* line 22, /Applications/MAMP/htdocs/palash/cl/july 2019/july/195 Resume/195 resume html/sass/_single_blog.scss */
@@ -2404,7 +2404,7 @@ ul {
   }
 
   .dropdown .dropdown-menu {
-    margin-top: 10px;
+    margin-top: 5px;
     display: none;
     transform: scale(1, 0);
   }
@@ -2431,11 +2431,13 @@ ul {
   .navbar-light .navbar-toggler {
     border-color: transparent;
     position: absolute;
-    left: 0;
-    top: 0;
+    left: 507px;
+    top: 9px;
     width: 33px;
     height: 33px;
   }
+
+  
 }
 
 /* VERY SMALL DEVICES (max 575px) */
@@ -3499,17 +3501,18 @@ font-size: 16px;
         margin-top: 15px;
     }
 
-    .actualites-reflections .navigation-controls {
-    display: flex;
-    align-self: flex-end; /* Aligner les contrôles avec la ligne "Voir tous les articles" */
-    margin-left: 270px; /* Espacement entre le texte et les flèches */
-    position: absolute;
-    top: 10px;
-    bottom: 25px; /* Positionner sous la section de titre */
-    left: 20px;
+.actualites-reflections .navigation-controls {
+        display: flex;
+        align-self: flex-end;
+        margin-left: 270px;
+        position: absolute;
+        top: 21px;
+        bottom: 1px;
+        left: 146px}
+
+
 }
-}
-}
+
 /* RESPONSIVE */
 @media (max-width: 900px) {
   .awards-grid {
@@ -3596,7 +3599,7 @@ font-size: 16px;
   background: white;
   border-radius: 18px;
   box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-  min-width: 350px;
+  min-width: 100%;
   max-width: 350px;
   overflow: hidden;
   flex-shrink: 0;
@@ -6517,8 +6520,20 @@ h6 {
       margin-top: 20px;
   }
 
+  .exp-card-subtitle{
+    font-family: "Raleway", sans-serif;
+    font-weight: 900;
+    color: #001645 !important;
+  }
+ .v-card .exp-card-text{
+    font-family: "Barlow", sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    color: #001645 !important;
+  }
+
   /* Titres et textes légèrement réduits */
-  .text-intro h1 {
+ .v-card .text-intro h1 {
       font-size: 1.8em;
   }
 }
