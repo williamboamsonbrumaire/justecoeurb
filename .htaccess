@@ -1,0 +1,27 @@
+# DEBUT DES REGLES DE REECRITURE POUR MASQUER LES EXTENSIONS
+
+# 1. Activation du moteur de reecriture
+RewriteEngine On
+
+# 2. MASQUER L'EXTENSION .html (et rediriger si elle est utilisee)
+# Redirection forcee de /page.html vers /page (URL propre)
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^.]+)\.html\ HTTP/
+RewriteRule ^([^.]+)\.html$ /%1 [R=301,L]
+
+# Reecriture interne pour que /page affiche le fichier page.html
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^/.]+)$ $1.html [L]
+
+
+# 3. MASQUER L'EXTENSION .php (et rediriger si elle est utilisee)
+# Redirection forcee de /page.php vers /page (URL propre)
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^.]+)\.php\ HTTP/
+RewriteRule ^([^.]+)\.php$ /%1 [R=301,L]
+
+# Reecriture interne pour que /page affiche le fichier page.php
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^/.]+)$ $1.php [L]
+
+# FIN DES REGLES DE REECRITURE POUR MASQUER LES EXTENSIONS
