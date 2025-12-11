@@ -2180,7 +2180,6 @@ ul {
   top: 0;
   left: 0;
   z-index: 999;
- 
 }
 
 .main_menu .container{
@@ -6198,7 +6197,7 @@ h6 {
 .cards-column {
     position: absolute;
     width: 100%;
-    top: 80%;
+    top: 10%;
     flex: 1; /* Prend la majeure partie de l'espace horizontal */
     padding-right: 0px;
     padding-bottom: 40px; /* Espace sous les cartes */
@@ -6685,6 +6684,11 @@ h6 {
    font-weight: 700;
    color: #0066FF;
 }
+.accordion-content p{
+   font-family: "Raleway", sans-serif;
+   font-weight: 700;
+   color: #1e1e1e;
+}
 
 .accordion-content.open {
     padding: 0 18px 16px;
@@ -6711,6 +6715,10 @@ h6 {
     margin-bottom: 20px;
     color: #0066FF;
 }
+.section-engagement .container{
+  overflow: visible;
+}
+
 .section-engagement p {
     font-size: 18px;
     font-weight: 500;
@@ -7292,4 +7300,8 @@ body {
 /* Cache bouton "Select Language" automatique */
 .goog-te-combo {
     display: none !important;
+}
+
+.distinction div{
+margin-top: 25px;
 }

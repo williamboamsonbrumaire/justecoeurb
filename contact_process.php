@@ -1,37 +1,60 @@
 <?php
+// Vérifie si le formulaire a été soumis via la méthode POST
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    
+    // 1. Récupération et sécurisation des données
+    $nom           = htmlspecialchars(trim($_POST['nom']));
+    $email_expediteur = htmlspecialchars(trim($_POST['email']));
+    $type_demande  = htmlspecialchars(trim($_POST['type_demande']));
+    $message       = htmlspecialchars(trim($_POST['message']));
 
-    $to = "rockybd1995@gmail.com";
-    $from = $_REQUEST['email'];
-    $name = $_REQUEST['name'];
-    $subject = $_REQUEST['subject'];
-    $number = $_REQUEST['number'];
-    $cmessage = $_REQUEST['message'];
+    // 2. Vérification rapide des champs obligatoires
+    if (empty($nom) || empty($email_expediteur) || empty($message) || empty($type_demande)) {
+        // Redirection vers la page d'accueil ou une page d'erreur si des champs sont vides
+        header("Location: index.html?status=error&msg=Veuillez remplir tous les champs.");
+        exit;
+    }
 
-    $headers = "From: $from";
-	$headers = "From: " . $from . "\r\n";
-	$headers .= "Reply-To: ". $from . "\r\n";
-	$headers .= "MIME-Version: 1.0\r\n";
-	$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+    // 3. Configuration de l'e-mail
+    $destinataire = "williamboamsonbrumaire@gmail.com"; // <-- REMPLACEZ PAR VOTRE ADRESSE
+    $sujet        = "Nouvelle demande - Type: " . $type_demande;
+    $headers      = "From: " . $nom . " <" . $email_expediteur . ">\r\n";
+    $headers     .= "Reply-To: " . $email_expediteur . "\r\n";
+    $headers     .= "MIME-Version: 1.0\r\n";
+    $headers     .= "Content-type: text/html; charset=UTF-8\r\n";
+    
+    // Corps de l'e-mail au format HTML pour une meilleure lisibilité
+    $contenu_email = "
+    <html>
+    <head>
+      <title>Nouvelle demande de contact</title>
+    </head>
+    <body>
+      <h2>Détails de la demande</h2>
+      <p><strong>Nom & Organisation:</strong> {$nom}</p>
+      <p><strong>E-mail:</strong> {$email_expediteur}</p>
+      <p><strong>Type de demande:</strong> {$type_demande}</p>
+      <hr>
+      <h3>Message:</h3>
+      <p>{$message}</p>
+      <hr>
+    </body>
+    </html>
+    ";
 
-    $subject = "You have a message from your Bitmap Photography.";
+    // 4. Envoi de l'e-mail
+    if (mail($destinataire, $sujet, $contenu_email, $headers)) {
+        // Succès : Redirige l'utilisateur vers la page d'accueil avec un message de succès
+        header("Location: index.html?status=success");
+    } else {
+        // Échec de l'envoi
+        header("Location: index.html?status=error&msg=Erreur lors de l'envoi de l'email.");
+    }
+    
+} else {
+    // Si la page est accédée directement sans formulaire
+    header("Location: index.html");
+}
 
-    $logo = 'img/logo.png';
-    $link = '#';
-
-	$body = "<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><title>Express Mail</title></head><body>";
-	$body .= "<table style='width: 100%;'>";
-	$body .= "<thead style='text-align: center;'><tr><td style='border:none;' colspan='2'>";
-	$body .= "<a href='{$link}'><img src='{$logo}' alt=''></a><br><br>";
-	$body .= "</td></tr></thead><tbody><tr>";
-	$body .= "<td style='border:none;'><strong>Name:</strong> {$name}</td>";
-	$body .= "<td style='border:none;'><strong>Email:</strong> {$from}</td>";
-	$body .= "</tr>";
-	$body .= "<tr><td style='border:none;'><strong>Subject:</strong> {$csubject}</td></tr>";
-	$body .= "<tr><td></td></tr>";
-	$body .= "<tr><td colspan='2' style='border:none;'>{$cmessage}</td></tr>";
-	$body .= "</tbody></table>";
-	$body .= "</body></html>";
-
-    $send = mail($to, $subject, $body, $headers);
-
+exit; // Toujours mettre exit après une redirection
 ?>
