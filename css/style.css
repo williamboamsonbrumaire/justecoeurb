@@ -15,8 +15,13 @@ body {
   margin: 0;
   font-size: 14px;
   object-fit: contain;
- overflow-x: hidden;
+ overflow: hidden;
 }
+
+.container{
+  overflow: hidden;
+}
+
 
 /* line 9, /Applications/MAMP/htdocs/palash/cl/july 2019/july/195 Resume/195 resume html/sass/_common.scss */
 .message_submit_form:focus {
@@ -74,6 +79,10 @@ input:hover, input:focus {
   .section_padding {
     padding: 70px 0px;
   }
+  .hide.mobile{
+  display: none;
+}
+
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
@@ -2174,6 +2183,10 @@ ul {
  
 }
 
+.main_menu .container{
+  overflow: visible;
+}
+
 /* SOCIAL ICONS */
 .main_menu .social_icon {
   margin-top: 10px;
@@ -2803,6 +2816,10 @@ ul {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
 }
+@media (max-width: 900px) {
+.text-muted{
+font-size: 16px;
+}}
 
 .subtitle {
   color: #666;
@@ -2966,6 +2983,10 @@ ul {
   .contact-text {
     text-align: center;
   }
+
+  .contact-text h2 {
+  font-size: 30px;
+}
 }
 
 /* Définition de l'animation de défilement */
@@ -3056,8 +3077,6 @@ ul {
   justify-content: space-between;
 }
 
-
-
 /* TEXTE */
 .testimonials-text {
   width: 55%;
@@ -3080,6 +3099,7 @@ ul {
   line-height: 1.6;
   color: #333;
   margin-bottom: 35px;
+  text-align: justify;
 }
 
 /* Cachez tous les items qui ne sont pas actifs */
@@ -3109,16 +3129,7 @@ ul {
 }
 
 .controls button {
-  /* width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  border: 1px solid #333;
-  background: transparent;
-  font-size: 30px;
-  cursor: pointer;
-  padding: 0;
-  margin-right: 10px;
-  transition: 0.3s; */
+
 
   background-color: #fff;
     border: 1px solid #ccc;
@@ -3168,6 +3179,20 @@ ul {
   .testimonials-text {
     margin-bottom: 40px;
   }
+
+  .testimonials-text h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+  .testimonials-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 }
 
 /*  */
@@ -3212,6 +3237,8 @@ ul {
   color: #fff;
   text-align: center;
 }
+
+
 .quote-section h3{
   font-family: "Raleway", sans-serif;
   font-weight: 600;
@@ -3238,6 +3265,35 @@ ul {
   color: #d8dee5;
   line-height: 1.7;
 }
+
+@media (max-width: 900px) {
+  .quote-section {
+
+  padding: 19px 30px;
+ 
+}
+
+.quote-section p {
+  max-width: 730px;
+  margin: auto;
+  font-family: "Barlow", sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.quote-section p span {
+  max-width: 730px;
+  margin: auto;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #d8dee5;
+  line-height: 1.7;
+}
+
+}
+
 
 /* ================= SECTION 3 ================= */
 /* Styles généraux de la section */
@@ -3266,6 +3322,7 @@ ul {
     font-family: "Raleway", sans-serif;
     font-weight: 650;
 }
+
 
 .actualites-reflections p {
     font-size: 1.1em;
@@ -3426,6 +3483,13 @@ ul {
         flex-direction: column;
         align-items: flex-start;
     }
+    .actualites-reflections h1 {
+    font-size: 2.0em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 650;
+}
 
     .view-all {
         margin-top: 10px;
@@ -3435,6 +3499,17 @@ ul {
         position: static; /* Replacer les contrôles en flux normal */
         margin-top: 15px;
     }
+
+    .actualites-reflections .navigation-controls {
+    display: flex;
+    align-self: flex-end; /* Aligner les contrôles avec la ligne "Voir tous les articles" */
+    margin-left: 270px; /* Espacement entre le texte et les flèches */
+    position: absolute;
+    top: 10px;
+    bottom: 25px; /* Positionner sous la section de titre */
+    left: 20px;
+}
+}
 }
 /* RESPONSIVE */
 @media (max-width: 900px) {
@@ -3745,6 +3820,14 @@ ul {
     flex: 1;
     margin: 0px 10px;
     width: 100%;
+}
+
+.contact-section .container {
+    width: 94%;
+    max-width: 1300px;
+  
+    gap: 60px;
+    align-items: flex-start;
 }
 
     .buttons {
@@ -6879,7 +6962,7 @@ h6 {
 /*Section Projet */
 
 .projects {
-  width: 90%;
+  width: 100%;
   max-width: 1300px;
   margin: 80px auto;
 }
@@ -7159,3 +7242,54 @@ h6 {
   }
 }
 
+/* Google Translate */
+/* --- Masquer tout ce qui vient de Google Translate --- */
+
+/* Supprime logos, textes, images, liens Google */
+.goog-logo-link,
+.goog-te-gadget span,
+.goog-te-gadget img,
+.goog-te-gadget-simple,
+.goog-te-menu-value,
+.goog-te-banner-frame,
+.goog-te-menu-frame,
+.goog-te-balloon-frame {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
+/* Supprime la barre "Traduction" qui s’affiche parfois en haut */
+iframe.goog-te-banner-frame {
+    display: none !important;
+}
+
+/* Empêche le body de descendre quand Google injecte sa bannière */
+body {
+    top: 0 !important;
+}
+
+/* Cache l’overlay translucide que Google met parfois */
+.goog-te-overlay {
+    display: none !important;
+    background: none !important;
+}
+
+/* Cache l’énorme conteneur que Google ajoute au body */
+.skiptranslate {
+    display: none !important;
+}
+
+/* Cache menu flottant */
+.VIpgJd-ZVi9od-ORHb-OEVmcd,
+.VIpgJd-ZVi9od-l4eHX-hSRGPd,
+.VIpgJd-ZVi9od-aZ2wEe {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
+/* Cache bouton "Select Language" automatique */
+.goog-te-combo {
+    display: none !important;
+}
