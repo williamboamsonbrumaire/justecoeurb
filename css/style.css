@@ -207,6 +207,7 @@ h3 {
   font-style: inherit;
   font-weight: 600;
   color: #2a2a2a;
+   font-family: "Barlow", sans-serif;
 }
 
 /* line 119, /Applications/MAMP/htdocs/palash/cl/july 2019/july/195 Resume/195 resume html/sass/_common.scss */
@@ -237,6 +238,7 @@ a:focus, .button:focus, button:focus, .btn:focus {
   /* line 134, /Applications/MAMP/htdocs/palash/cl/july 2019/july/195 Resume/195 resume html/sass/_common.scss */
   .section_tittle {
     margin-bottom: 40px;
+     font-family: "Barlow", sans-serif;
   }
 }
 
@@ -620,7 +622,7 @@ ul {
 
 /* line 106, /Applications/MAMP/htdocs/palash/cl/july 2019/july/195 Resume/195 resume html/sass/_button.scss */
 .btn_3:hover {
-  background-color: #f81c1c;
+  background-color: #0066FF;
   box-shadow: 0px 15px 20px 0px rgba(248, 28, 28, 0.1);
   color: #fff;
 }
@@ -652,7 +654,7 @@ ul {
   display: inline-block;
   padding: 9.5px 28px;
   border-radius: 50px;
-  background-color: #ff6426;
+  background-color: #0066FF;
   font-size: 14px;
   font-weight: 400;
   color: #fff;
@@ -664,9 +666,9 @@ ul {
 
 /* line 136, /Applications/MAMP/htdocs/palash/cl/july 2019/july/195 Resume/195 resume html/sass/_button.scss */
 .single_page_btn:hover {
-  color: #ff6426;
+  color: #0066FF;
   background-color: #fff;
-  border: 2px solid #ff6426;
+  border: 2px solid #0066FF;
 }
 
 @media (max-width: 575px) {
@@ -699,13 +701,13 @@ ul {
   -webkit-transition: 0.5s;
   transition: 0.5s;
   padding: 14.5px 43px;
-  background-color: #ea5267;
-  border: 2px solid #ea5267;
+  background-color: #0066FF;
+  border: 2px solid #0066FF;
 }
 
 /* line 164, /Applications/MAMP/htdocs/palash/cl/july 2019/july/195 Resume/195 resume html/sass/_button.scss */
 .btn_4:hover {
-  color: #ea5267 !important;
+  color: #0066FF !important;
   background-color: transparent;
 }
 
@@ -739,7 +741,7 @@ ul {
 
 /* line 21, /Applications/MAMP/htdocs/palash/cl/july 2019/july/195 Resume/195 resume html/sass/_blog.scss */
 .blog_area a h2:hover {
-  color: #ea5267 !important;
+  color: #0066FF !important;
 }
 
 /* line 29, /Applications/MAMP/htdocs/palash/cl/july 2019/july/195 Resume/195 resume html/sass/_blog.scss */
@@ -788,7 +790,7 @@ ul {
 
 /* line 66, /Applications/MAMP/htdocs/palash/cl/july 2019/july/195 Resume/195 resume html/sass/_blog.scss */
 .single-blog a:hover {
-  color: #ea5267;
+  color: #0066FF;
 }
 
 /* line 71, /Applications/MAMP/htdocs/palash/cl/july 2019/july/195 Resume/195 resume html/sass/_blog.scss */
@@ -1081,6 +1083,7 @@ ul {
 /* line 379, /Applications/MAMP/htdocs/palash/cl/july 2019/july/195 Resume/195 resume html/sass/_blog.scss */
 .latest_blog_area {
   background: #f9f9ff;
+   font-family: "Barlow", sans-serif;
 }
 
 /* line 383, /Applications/MAMP/htdocs/palash/cl/july 2019/july/195 Resume/195 resume html/sass/_blog.scss */
@@ -1216,7 +1219,7 @@ ul {
 
 /* line 515, /Applications/MAMP/htdocs/palash/cl/july 2019/july/195 Resume/195 resume html/sass/_blog.scss */
 .categories_post:hover .categories_details {
-  background: rgba(222, 99, 32, 0.85);
+  background: #0066FF(222, 99, 32, 0.85);
 }
 
 /*============ blog_left_sidebar css ==============*/
@@ -1250,7 +1253,7 @@ ul {
 
 /* line 549, /Applications/MAMP/htdocs/palash/cl/july 2019/july/195 Resume/195 resume html/sass/_blog.scss */
 .blog_details a:hover {
-  color: #ea5267;
+  color: #0066FF;
 }
 
 /* line 554, /Applications/MAMP/htdocs/palash/cl/july 2019/july/195 Resume/195 resume html/sass/_blog.scss */
@@ -2564,6 +2567,9 @@ ul {
     height:auto;
     z-index: 3;
 }
+ .hero-mini-img {
+       display: none;
+    }
 
 .hero-white {
     background: #ffffff;
@@ -2578,6 +2584,15 @@ ul {
 
     .hero-abs-img {
       display: none;
+    }
+
+    .hero-mini-img {
+      display: block;
+        width: 80%;
+        max-width: 405px;
+        width: 600px;
+        height:auto;
+        z-index: 3;
     }
 
     .hero-blue {
@@ -2595,6 +2610,15 @@ ul {
     /* Image devient relative (dans le flux normal) et centrée */
     .hero-abs-img {
       display: none;
+    }
+
+    .hero-mini-img {
+      display: block;
+        /* width: 80%; */
+        max-width: 505px;
+        width: auto;
+        height:auto;
+        z-index: 3;
     }
 
     /* Ajuster l'espacement de la section pour le mobile */
@@ -6070,7 +6094,7 @@ h6 {
 /* line 40, /Applications/MAMP/htdocs/palash/cl/july 2019/july/195 Resume/195 resume html/sass/_breadcrumb.scss */
 .breadcrumb .breadcrumb_iner .breadcrumb_iner_item h2 {
   color: #fff;
-  font-size: 80px;
+  font-size: 50px;
   font-weight: 500;
   margin-bottom: 10px;
   text-transform: capitalize;
@@ -7320,3 +7344,163 @@ body {
 .distinction div{
 margin-top: 25px;
 }
+
+
+
+/* ====================================================== */
+
+     .content-section {
+      padding: 60px 0;
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+    .section-title-p {
+      text-align: center;
+      margin-bottom: 50px;
+      font-size: 2.5rem;
+      font-weight: 700;
+
+    color:#0066FF;
+    font-family: "Barlow", sans-serif;
+      position: relative;
+    }
+    .section-title-p::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 4px;
+      background-color: #007bff;
+      margin: 10px auto 0;
+      border-radius: 2px;
+    }
+    .grid-layout {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+    .article-card {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,.1);
+      overflow: hidden;
+      transition: transform .3s, box-shadow .3s;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .article-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 18px rgba(0,0,0,.15);
+    }
+    .article-card-media {
+      height: 200px;
+      background-color: #e9ecef;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #6c757d;
+      font-weight: 600;
+      overflow: hidden;
+    }
+    .article-card-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .article-card-content {
+      padding: 20px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .article-card-content h3 {
+      font-size: 1.25rem;
+      margin-top: 0;
+      margin-bottom: 15px;
+      color: #333;
+      line-height: 1.4;
+    }
+    .article-card-content .btn {
+      display: inline-block;
+      padding: 10px 15px;
+      background-color: #007bff;
+      color: white;
+      text-align: center;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: background-color .3s;
+      font-weight: 500;
+    }
+    .article-card-content .btn:hover { background-color: #0056b3; }
+    .video-card {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,.1);
+      overflow: hidden;
+    }
+    .video-card-title {
+      font-size: 1rem;
+      font-weight: 600;
+      padding: 15px;
+      color: #333;
+      margin: 0;
+      background-color: #fff;
+      border-bottom: 1px solid #eee;
+    }
+    .video-embed-responsive {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%;
+      height: 0;
+    }
+    .video-embed-responsive iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      border: 0;
+    }
+    .video-grid-item { margin-bottom: 30px; }
+    .pagination-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
+    .page-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 6px;
+      border: 2px solid #dee2e6;
+      background: #fff;
+      color: #495057;
+      font-size: .95rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all .2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .page-btn:hover { border-color: #007bff; color: #007bff; }
+    .page-btn.active { background-color: #007bff; border-color: #007bff; color: #fff; }
+    .page-btn:disabled { opacity: .4; cursor: default; }
+    .page-btn.arrow { font-size: 1.1rem; }
+    .page-info {
+      text-align: center;
+      margin-top: 12px;
+      font-size: .88rem;
+      color: #6c757d;
+    }
+    .grid-layout { animation: fadeIn .35s ease; }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }

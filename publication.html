@@ -110,7 +110,7 @@
                 <div class="col-lg-12">
                     <div class="breadcrumb_iner">
                         <div class="breadcrumb_iner_item">
-                            <h2>Publications</h2>
+                            <h2>Vue d’ensemble sur nos réflexions, publications et engagements publics</h2>
                         </div>
                     </div>
                 </div>
@@ -119,257 +119,137 @@
     </section>
     <!-- breadcrumb start-->
 
-    <style>
-    /* Styles généraux pour la section de contenu */
-    .content-section {
-        padding: 60px 0;
-        font-family: Arial, sans-serif;
-        background-color: #f9f9f9; /* Fond léger pour la section */
-    }
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 15px;
-    }
-    .section-title {
-        text-align: center;
-        margin-bottom: 50px;
-        font-size: 2.5rem;
-        font-weight: 700;
-        color: #333;
-        position: relative;
-    }
-    .section-title::after {
-        content: '';
-        display: block;
-        width: 60px;
-        height: 4px;
-        background-color: #007bff; /* Couleur d'accentuation moderne */
-        margin: 10px auto 0;
-        border-radius: 2px;
-    }
+<ul id="articles-data" hidden>
+    <li
+    data-img="img/blog/cover-gps-thumbnail.JPG"
+    data-title="Global Peace Summit 2026 : Juste-Cœur Beaubrun porte la voix d'Haïti à Paris. (Radio Francophonie Connexion)"
+    data-url="https://radiofrancophonieconnexion.com/index.php/2026/02/11/global-peace-summit-2026-juste-coeur-beaubrun-porte-la-voix-dhaiti-a-paris/">
+  </li>
+  <li
+    data-img="img/blog/Leconomiste-Juste-Coeur-Beaubrun-represente-Haiti-au-Global-Peace-Summit-Paris-2026.webp"
+    data-title="L'économiste haïtien Juste-Cœur Beaubrun a été le délégué officiel d'Haïti au Global Peace Summit Paris 2026, tenu du 28 au 31 janvier dans les locaux de l'UNESCO et au Sénat français. (Chokarella)"
+    data-url="https://www.chokarella.com/2026/02/10/leconomiste-juste-coeur-beaubrun-a-represente-haiti-au-global-peace-summit-paris-2026/">
+  </li>
+  <li
+    data-img="img/JUSTE-WEBSITE.webp"
+    data-title="L'Écho d'une Jeunesse en Action : Quand Haïti s'invite au Sommet Mondial de la Paix"
+    data-url="https://www.visionmedia.pro/magazine/l-echo-d-une-jeunesse-en-action-quand-haiti-s-invite-au-sommet-mondial-de-la-paix">
+  </li>
+  <li
+    data-img="img/JUSTE-WEBSITE.webp"
+    data-title="Juste-Coeur Beaubrun, un jeune leader qui se veut utile et engagé dans sa communauté (Chokarella)"
+    data-url="https://www.chokarella.com/2025/05/05/juste-coeur-beaubrun-un-jeune-leader-qui-se-veut-utile-et-engage-dans-sa-communaute/">
+  </li>
+  <li
+    data-img="img/JUSTE-HELP.JPG"
+    data-title="Juste-Coeur Beaubrun - Étudiants Actuels (UHELP)"
+    data-url="https://www.uhelp.net/fr/etudiants-actuels/juste-coeur-beaubrun-28p44">
+  </li>
+  <li
+    data-img="img/JUSTE-MYKOLEG.jpg"
+    data-title="Juste-Coeur Beaubrun, un leader né pour servir les autres (Le Quotidien)"
+    data-url="https://lequotidiennews.org/juste-coeur-beaubrun-un-leader-ne-pour-servir-les-autres/">
+  </li>
+  <li
+    data-img="img/JUSTE-MYKOLEG.jpg"
+    data-title="Entrepreneur du Mois - Avril 2021 (Caritas Journal FSESP)"
+    data-url="https://caritasjournalfsesp.wordpress.com/2021/06/25/entrepreneur-du-mois-avril-2021/">
+  </li>
+  
+  <li
+    data-img="..."
+    data-title=""
+    data-url="#">
+  </li>
+  <li
+    data-img="..."
+    data-title=""
+    data-url="#">
+  </li>
+</ul>
 
-    /* Grille de cartes pour les articles et vidéos */
-    .grid-layout {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 30px;
-    }
 
-    /* Style des cartes d'article */
-    .article-card {
-        background-color: #fff;
-        border-radius: 8px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        overflow: hidden;
-        transition: transform 0.3s, box-shadow 0.3s;
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-    }
-    .article-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-    }
-    .article-card-media {
-        height: 200px; /* Espace réservé pour l'image */
-        background-color: #e9ecef;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #6c757d;
-        font-weight: 600;
-        overflow: hidden;
-    }
-    .article-card-content {
-        padding: 20px;
-        flex-grow: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-    .article-card-content h3 {
-        font-size: 1.25rem;
-        margin-top: 0;
-        margin-bottom: 15px;
-        color: #333;
-        line-height: 1.4;
-    }
-    .article-card-content .btn {
-        display: inline-block;
-        padding: 10px 15px;
-        background-color: #007bff;
-        color: white;
-        text-align: center;
-        border-radius: 5px;
-        text-decoration: none;
-        transition: background-color 0.3s;
-        font-weight: 500;
-    }
-    .article-card-content .btn:hover {
-        background-color: #0056b3;
-    }
+<ul id="videos-data" hidden>
+  <li
+    data-title="Peace Beyond Words: From Conversation to Conscious Action"
+    data-embed="https://www.youtube.com/embed/K2UsezxOP5k?si=sXZdKtg2J5XCWjx5">
+  </li>
+  <li
+    data-title="JC_Haiti_World Dream Showcase (We are World Road!)"
+    data-embed="https://www.youtube.com/embed/m6rCKcIGnh4">
+  </li>
+  <li
+    data-title="À la découverte de Juste-coeur Beaubrun, co-fondateur Mykolleg (Entretien 2000)"
+    data-embed="https://www.youtube.com/embed/fK_w8CP1ibY">
+  </li>
+  <li
+    data-title="Modèl avèk Edens Liancourt (TeleMIX)"
+    data-embed="https://www.youtube.com/embed/HmBvbrlOJVw">
+  </li>
+  <li
+    data-title="EN DIRECT | L'INVITE DU MIDI VENDREDI 12 AOUT 2022 (Radio Television Caraïbes)"
+    data-embed="https://www.youtube.com/embed/AG9fcejqg7A">
+  </li>
+  <!-- <li
+    data-title="Vidéo exemple 5 – Conférence jeunesse"
+    data-embed="https://www.youtube.com/embed/m6rCKcIGnh4">
+  </li>
+  <li
+    data-title="Vidéo exemple 6 – Panel innovation"
+    data-embed="https://www.youtube.com/embed/fK_w8CP1ibY">
+  </li> -->
+  <!-- <li
+    data-title="Vidéo exemple 7 – Table ronde"
+    data-embed="https://www.youtube.com/embed/HmBvbrlOJVw">
+  </li> -->
+</ul>
 
-    /* Style des vidéos YouTube (Lecture embarquée et responsive) */
-    .video-card {
-        background-color: #fff;
-        border-radius: 8px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        overflow: hidden;
-    }
-    .video-card-title {
-        font-size: 1rem;
-        font-weight: 600;
-        padding: 15px;
-        color: #333;
-        margin-top: 0;
-        margin-bottom: 0;
-        background-color: #fff;
-        border-bottom: 1px solid #eee;
-    }
-    .video-embed-responsive {
-        position: relative;
-        width: 100%;
-        padding-bottom: 56.25%; /* Ratio 16:9 */
-        height: 0;
-    }
-    .video-embed-responsive iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border: 0;
-    }
 
-    /* Amélioration pour la section des vidéos (moins de padding autour de la carte) */
-    .video-grid-item {
-        margin-bottom: 30px;
-    }
-</style>
+<!-- ══════════════════════════════════════════════════════
+     SECTIONS — NE PAS MODIFIER
+══════════════════════════════════════════════════════ -->
+
 <section class="content-section articles-section">
-    <div class="container">
-        <h2 class="section-title">Articles, podcasts, conférences et panels</h2>
-        <div class="grid-layout">
+  <div class="container">
+    <h2 class="section-title-p">Articles, podcasts, conférences et panels</h2>
 
-            <div class="article-card">
-                <div class="article-card-media">
-                    <img src="img/JUSTE-WEBSITE.webp" class="img-fluid" alt="">
-                </div>
-                <div class="article-card-content">
-                    <h3>Juste-Coeur Beaubrun, un jeune leader qui se veut utile et engagé dans sa communauté</h3>
-                    <a href="https://www.chokarella.com/2025/05/05/juste-coeur-beaubrun-un-jeune-leader-qui-se-veut-utile-et-engage-dans-sa-communaute/" target="_blank" class="btn">Lire l'article</a>
-                </div>
-            </div>
+    <div id="articleGrid" class="grid-layout"></div>
 
-            <div class="article-card">
-                <div class="article-card-media">
-                   <img src="img/JUSTE-HELP.JPG" class="img-fluid" alt="">
-                </div>
-                <div class="article-card-content">
-                    <h3>Juste-Coeur Beaubrun - Étudiants Actuels (UHELP)</h3>
-                    <a href="https://www.uhelp.net/fr/etudiants-actuels/juste-coeur-beaubrun-28p44" target="_blank" class="btn">Lire l'article</a>
-                </div>
-            </div>
-
-            <div class="article-card">
-                <div class="article-card-media">
-                    <img src="img/JUSTE-MYKOLEG.jpg" class="img-fluid" alt="">
-                </div>
-                <div class="article-card-content">
-                    <h3>Juste-Coeur Beaubrun, un leader né pour servir les autres</h3>
-                    <a href="https://lequotidiennews.org/juste-coeur-beaubrun-un-leader-ne-pour-servir-les-autres/" target="_blank" class="btn">Lire l'article</a>
-                </div>
-            </div>
-
-            <div class="article-card">
-                <div class="article-card-media">
-                    <img src="img/JUSTE-MYKOLEG.jpg" class="img-fluid" alt="">
-                </div>
-                <div class="article-card-content">
-                    <h3>Entrepreneur du Mois - Avril 2021</h3>
-                    <a href="https://caritasjournalfsesp.wordpress.com/2021/06/25/entrepreneur-du-mois-avril-2021/" target="_blank" class="btn">Lire l'article</a>
-                </div>
-            </div>
-
-        </div>
-    </div>
+    <div class="pagination-wrapper" id="articlePagination"></div>
+    <p class="page-info" id="articlePageInfo"></p>
+  </div>
 </section>
+
 <section class="content-section videos-section" style="background-color: #fff;">
-    <div class="container">
-        <h2 class="section-title">Vidéos YouTube</h2>
-        <div class="grid-layout">
+  <div class="container">
+    <h2 class="section-title">Vidéos YouTube</h2>
 
-            <div class="video-grid-item">
-                <div class="video-card">
-                    <p class="video-card-title">JC_Haiti_World Dream Showcase (We are World Road!)</p>
-                    <div class="video-embed-responsive">
-                        <iframe src="https://www.youtube.com/embed/m6rCKcIGnh4"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen></iframe>
-                    </div>
-                </div>
-           </div>
+    <div id="videoGrid" class="grid-layout"></div>
 
-            <div class="video-grid-item">
-                <div class="video-card">
-                    <p class="video-card-title">À la découverte de Juste-coeur Beaubrun, co-fondateur Mykolleg (Entretien 2000)</p>
-                    <div class="video-embed-responsive">
-                        <iframe src="https://www.youtube.com/embed/fK_w8CP1ibY"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen></iframe>
-                    </div>
-                </div>
-            </div>
-
-            <div class="video-grid-item">
-                <div class="video-card">
-                    <p class="video-card-title">Modèl avèk Edens Liancourt (TeleMIX)</p>
-                    <div class="video-embed-responsive">
-                        <iframe src="https://www.youtube.com/embed/HmBvbrlOJVw"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen></iframe>
-                    </div>
-                </div>
-            </div>
-
-            <div class="video-grid-item">
-                <div class="video-card">
-                    <p class="video-card-title">EN DIRECT | L'INVITE DU MIDI VENDREDI 12 AOUT 2022 (Radio Television Caraïbes)</p>
-                    <div class="video-embed-responsive">
-                        <iframe src="https://www.youtube.com/embed/AG9fcejqg7A"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen></iframe>
-                    </div>
-                </div>
-           </div>
-
+    <div class="pagination-wrapper" id="videoPagination"></div>
+    <p class="page-info" id="videoPageInfo"></p>
+  </div>
 </section>
 
 <section class="cta-section py-5" style="background-color: #0b1a3d; color: white;">
-    <div class="container py-4">
-        <div class="row align-items-center">
-
-            <div class="col-lg-8 col-md-12 mb-4 mb-lg-0">
-                <h2 class="display-6 text-white fw-bold mb-3">En savoir plus ou collaborer avec Juste-Cœur ?</h2>
-                <p class="lead text-muted" style="color: #a8b0c0 !important;">
-                    Vous pouvez explorer ses projets, ses publications ou entrer directement 
-                    en contact pour imaginer de nouveaux programmes au service de la 
-                    jeunesse et des territoires.
-                </p>
-            </div>
-
-            <div class="col-lg-4 col-md-12 d-flex justify-content-lg-end justify-content-start flex-wrap gap-3">
-                
-                <a href="projet.html" class="btn btn-white mt-4 px-4 py-2">Découvrir ses engagements</a>
-                
-                <a href="contact.html" class="mt-3 btn btn-primary mt-4 px-4 py-2">Proposer une collaboration</a>
-            </div>
-
-        </div>
+  <div class="container py-4">
+    <div class="row align-items-center">
+      <div class="col-lg-8 col-md-12 mb-4 mb-lg-0">
+        <h2 class="display-6 text-white fw-bold mb-3">En savoir plus ou collaborer avec Juste-Cœur ?</h2>
+        <p class="lead text-muted" style="color: #a8b0c0 !important;">
+          Vous pouvez explorer ses projets, ses publications ou entrer directement
+          en contact pour imaginer de nouveaux programmes au service de la
+          jeunesse et des territoires.
+        </p>
+      </div>
+      <div class="col-lg-4 col-md-12 d-flex justify-content-lg-end justify-content-start flex-wrap gap-3">
+        <a href="projet.html" class="btn btn-white mt-4 px-4 py-2">Découvrir ses engagements</a>
+        <a href="contact.html" class="mt-3 btn btn-primary mt-4 px-4 py-2">Proposer une collaboration</a>
+      </div>
     </div>
+  </div>
 </section>
-<!-- ================== FOOTER ================== -->
+
   <footer class="footer">
     <p class="text-dark">&copy; <script>document.write(new Date().getFullYear());</script> Juste-Cœur Beaubrun. Tous droits réservés.</p>
 
@@ -405,6 +285,162 @@
  <div id="google_translate_element" style="display:none;"></div>
 <script src="js/global.js"></script>
 <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+<script>
+/* ══════════════════════════════
+   LECTURE DES DONNÉES DEPUIS LE HTML
+══════════════════════════════ */
+const articles = Array.from(document.querySelectorAll('#articles-data li')).map(li => ({
+  img:   li.dataset.img,
+  title: li.dataset.title,
+  url:   li.dataset.url
+}));
+
+const videos = Array.from(document.querySelectorAll('#videos-data li')).map(li => ({
+  title: li.dataset.title,
+  embed: li.dataset.embed
+}));
+
+/* ══════════════════════════════
+   MOTEUR DE PAGINATION GÉNÉRIQUE
+══════════════════════════════ */
+function Paginator({ data, perPage, gridId, paginationId, infoId, renderItem, gridClass }) {
+  let currentPage = 1;
+  const totalPages = () => Math.ceil(data.length / perPage);
+
+  function render() {
+    // Grille
+    const grid = document.getElementById(gridId);
+    grid.className = gridClass || 'grid-layout';
+    const start = (currentPage - 1) * perPage;
+    const slice = data.slice(start, start + perPage);
+    grid.innerHTML = slice.map(renderItem).join('');
+    // Force animation replay
+    grid.style.animation = 'none';
+    grid.offsetHeight; // reflow
+    grid.style.animation = '';
+
+    // Info
+    const info = document.getElementById(infoId);
+    const end = Math.min(start + perPage, data.length);
+    info.textContent = `Affichage ${start + 1}–${end} sur ${data.length} éléments`;
+
+    // Pagination
+    const pag = document.getElementById(paginationId);
+    pag.innerHTML = '';
+
+    const tp = totalPages();
+    if (tp <= 1) return;
+
+    // Bouton précédent
+    const prev = btn('<i class="fas fa-chevron-left"></i>', currentPage === 1);
+    prev.classList.add('arrow');
+    prev.onclick = () => { if (currentPage > 1) { currentPage--; render(); } };
+    pag.appendChild(prev);
+
+    // Pages
+    const pages = getPages(currentPage, tp);
+    pages.forEach(p => {
+      if (p === '…') {
+        const el = document.createElement('span');
+        el.textContent = '…';
+        el.style.cssText = 'padding:0 4px;color:#aaa;line-height:40px;';
+        pag.appendChild(el);
+      } else {
+        const b = btn(p, false);
+        if (p === currentPage) b.classList.add('active');
+        b.onclick = () => { currentPage = p; render(); };
+        pag.appendChild(b);
+      }
+    });
+
+    // Bouton suivant
+    const next = btn('<i class="fas fa-chevron-right"></i>', currentPage === tp);
+    next.classList.add('arrow');
+    next.onclick = () => { if (currentPage < tp) { currentPage++; render(); } };
+    pag.appendChild(next);
+  }
+
+  function btn(html, disabled) {
+    const b = document.createElement('button');
+    b.innerHTML = html;
+    b.className = 'page-btn';
+    b.disabled = disabled;
+    return b;
+  }
+
+  function getPages(cur, total) {
+    if (total <= 7) return Array.from({length: total}, (_, i) => i + 1);
+    const pages = [];
+    if (cur <= 4) {
+      pages.push(1, 2, 3, 4, 5, '…', total);
+    } else if (cur >= total - 3) {
+      pages.push(1, '…', total-4, total-3, total-2, total-1, total);
+    } else {
+      pages.push(1, '…', cur-1, cur, cur+1, '…', total);
+    }
+    return pages;
+  }
+
+  render();
+}
+
+/* ══════════════════════════════
+   RENDU ARTICLES
+══════════════════════════════ */
+function renderArticle(a) {
+  return `
+  <div class="article-card">
+    <div class="article-card-media">
+      <img src="${a.img}" alt="" loading="lazy" onerror="this.style.display='none'">
+    </div>
+    <div class="article-card-content">
+      <h3>${a.title}</h3>
+      <a href="${a.url}" target="_blank" rel="noopener" class="btn">Lire l'article</a>
+    </div>
+  </div>`;
+}
+
+/* ══════════════════════════════
+   RENDU VIDÉOS
+══════════════════════════════ */
+function renderVideo(v) {
+  return `
+  <div class="video-grid-item">
+    <div class="video-card">
+      <p class="video-card-title">${v.title}</p>
+      <div class="video-embed-responsive">
+        <iframe src="${v.embed}"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>`;
+}
+
+/* ══════════════════════════════
+   INITIALISATION
+══════════════════════════════ */
+Paginator({
+  data: articles,
+  perPage: 6,
+  gridId: 'articleGrid',
+  paginationId: 'articlePagination',
+  infoId: 'articlePageInfo',
+  renderItem: renderArticle
+});
+
+Paginator({
+  data: videos,
+  perPage: 6,
+  gridId: 'videoGrid',
+  paginationId: 'videoPagination',
+  infoId: 'videoPageInfo',
+  renderItem: renderVideo
+});
+</script>
+
 </body>
 
 </html>
