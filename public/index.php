@@ -507,6 +507,25 @@ Sélectionné pour représenter Haïti au GPS à Paris (France)</p>
     <div class="carousel-container col-sm-12 col-lg-8"  >
         <div class="cards-wrapper">
             <div class="card">
+                <div class="image-placeholder" style="background-image: url('./img/blog/BID-Banj.jpg');"></div>
+                <div class="content">
+                    <span class="tag tag-reflexion">Gazette Haiti</span>
+                    <h3>BANJ et la BID lancent le projet ProAI pour stimuler l’intelligence artificielle en Haïti</h3>
+                    <p>La Banque interaméricaine de développement et BANJ ont officiellement lancé le programme ProAI à Port-au-Prince. Cette initiative de coopération technique vise à promouvoir l’intelligence artificielle, former des talents locaux et renforcer l’écosystème d’innovation afin de positionner Haïti dans la transformation numérique mondiale.</p>
+                    <a class="btn text-white btn-secondary mt-3 px-4 py-2" href="https://www.gazettehaiti.com/node/13515">Lire plus</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="image-placeholder" style="background-image: url('./img/blog/Leconomiste-Juste-Coeur-Beaubrun-represente-Haiti-au-Global-Peace-Summit-Paris-2026.webp');"></div>
+                <div class="content">
+                    <span class="tag tag-reflexion">Chokarella</span>
+                    <h3>À une époque où parler de paix en Haïti semble utopique, les jeunes s'engagent et font briller Haïti sur la scène internationale</h3>
+                    <p>L'économiste haïtien Juste-Cœur Beaubrun a été le délégué officiel d'Haïti au Global Peace Summit Paris 2026, tenu du 28 au 31 janvier dans les locaux de l'UNESCO et au Sénat français.</p>
+                    <a class="btn text-white btn-secondary mt-3 px-4 py-2" href="https://www.chokarella.com/2025/05/05/juste-coeur-beaubrun-un-jeune-leader-qui-se-veut-utile-et-engage-dans-sa-communaute/">Lire plus</a>
+                </div>
+            </div>
+
+            <div class="card">
                 <div class="image-placeholder" style="background-image: url('./img/JUSTE-WEBSITE.webp');"></div>
                 <div class="content">
                     <span class="tag tag-reflexion">Chokarella</span>

@@ -120,6 +120,11 @@
 
 <ul id="articles-data" hidden>
     <li
+    data-img="./img/blog/BID-Banj.jpg"
+    data-title="BANJ et la BID lancent le projet ProAI pour stimuler l’intelligence artificielle en Haïti (Gazette Haiti)"
+    data-url="https://www.gazettehaiti.com/node/13515">
+  </li>
+    <li
     data-img="img/blog/cover-gps-thumbnail.JPG"
     data-title="Global Peace Summit 2026 : Juste-Cœur Beaubrun porte la voix d'Haïti à Paris. (Radio Francophonie Connexion)"
     data-url="https://radiofrancophonieconnexion.com/index.php/2026/02/11/global-peace-summit-2026-juste-coeur-beaubrun-porte-la-voix-dhaiti-a-paris/">
