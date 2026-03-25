@@ -1,0 +1,24 @@
+RewriteEngine On
+# Remplacez /jcb/ par / si vous mettez le site en ligne à la racine
+RewriteBase /jcb/
+
+# --- 1. REDIRECTION PHYSIQUE (Pour cacher le dossier si on y accède) ---
+# Si l'URL contient explicitement /pages/contact.php, on redirige vers /contact
+RewriteCond %{THE_REQUEST} \s/jcb/pages/([^/\s]+)\.php [NC]
+RewriteRule ^ %1 [R=301,L]
+
+# --- 2. RÉÉCRITURE INTERNE (Pour que le serveur trouve le fichier) ---
+# Si la requête n'est pas un fichier réel (ex: CSS, image)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+# On cherche le fichier .php dans le dossier /pages/
+RewriteCond %{DOCUMENT_ROOT}/jcb/pages/$1.php -f
+RewriteRule ^([^/]+)$ pages/$1.php [L]
+
+# --------------------------------------------------------------------
+# 3. NETTOYAGE CLASSIQUE (.php et .html)
+# --------------------------------------------------------------------
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.+)$ $1.php [L]

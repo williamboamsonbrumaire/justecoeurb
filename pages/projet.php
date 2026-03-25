@@ -20,90 +20,14 @@
     <meta name="twitter:image" content="https://justecoeurb.ht/img/jc_speaking.jpg">
     
     <title>Engagement Communautaire - Juste Coeur Beaubrun</title>
-    <link rel="icon" href="img/banner_bg_2.png">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- animate CSS -->
-    <link rel="stylesheet" href="css/animate.css">
-    <!-- owl carousel CSS -->
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <!-- themify CSS -->
-    <link rel="stylesheet" href="css/themify-icons.css">
-    <!-- flaticon CSS -->
-    <link rel="stylesheet" href="css/flaticon.css">
-    <!-- font awesome CSS -->
-    <link rel="stylesheet" href="css/magnific-popup.css">
-    <!-- swiper CSS -->
-    <link rel="stylesheet" href="css/slick.css">
-    <link rel="stylesheet" href="css/gijgo.min.css">
-    <link rel="stylesheet" href="css/nice-select.css">
-    <link rel="stylesheet" href="css/all.css">
-    <!-- style CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    
 </head>
 
 <body>
       <!--::header part start::-->
-<section class="bg-white ">
-    <header class="main_menu home_menu">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-12">
-                    <nav class="navbar navbar-expand-lg navbar-light">
-                        <a class="logo" href="index.html">
-                            <h3 class="m-0">Juste-Cœur <span>Beaubrun</span></h3>
-                            <small>LEADERSHIP · INNOVATION · JEUNESSE</small>
-                         </a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse"
-                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="menu_icon"><i class="ti-menu"></i></span>
-                        </button>
-
-                        <div class="collapse navbar-collapse main-menu-item" id="navbarSupportedContent">
-                            <ul class="navbar-nav">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="about.html">A propos</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="projet.html">Engagements</a>
-                                </li>
-                                
-                                <li class="nav-item">
-                                    <a class="nav-link" href="publication.html">Publications</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="blog.html">Blog</a>
-                                </li>
-
-                                <li class="nav-item translate-dropdown dropdown">
-                                    <a class="nav-link  dropdown-toggle" href="blog.html" id="navbarDropdown"
-                                        role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Langues
-                                    </a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="#" onclick="translateLanguage('fr')"><img src="https://flagcdn.com/24x18/fr.png" alt=""> Français</a>
-                                        <a class="dropdown-item" href="#" onclick="translateLanguage('en')"><img src="https://flagcdn.com/24x18/gb.png" alt=""> English</a>
-                                        <a class="dropdown-item" href="#" onclick="translateLanguage('es')"><img src="https://flagcdn.com/24x18/es.png" alt=""> Español</a>
-                                        <a class="dropdown-item" href="#" onclick="translateLanguage('ht')"><img src="https://flagcdn.com/24x18/ht.png" alt=""> Kreyòl Ayisyen</a>
-                                        <a class="dropdown-item" href="#" onclick="translateLanguage('pt')"><img src="https://flagcdn.com/24x18/pt.png" alt=""> Português</a>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="social_icon">
-                            <a href="http://facebook.com/justecoeur.beaubrun"><i class="fab fa-facebook-square"></i></a>
-                            <a href="http://instagram.com/justecoeurb"><i class="fab fa-instagram"></i></a>
-                            <a href="http://linkedin.com/in/justecoeurbeaubrun"><i class="fab fa-linkedin"></i></a>
-                            <a href="http://x.com/justecoeurb"><i class="fab fa-twitter"></i></a>
-                        </div>
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </header>
-
-  </section>
+<?php
+    require_once "../includes/header.php";
+?>
     <!-- Header part end-->
 
 <section class="programmes">
@@ -122,35 +46,34 @@
         </p>
     </div>
 
-    <div class="gallery-container dispay-none-mobile">
-        <div class="gallery-columns">
-            <div class="column column-1" data-direction="up">
-                
-                <img src="img/JUSTE-HELP.JPG" alt="Image 3" />
-                <img src="img/jcb-devexpo-public.jpeg" alt="Image 5" />
-                <img src="img/jc-banj.jpg" alt="Image 1" />
-                <img src="img/jcb-parlement.jpg" alt="Image 4" />
-                <img src="img/jc_casdetude.jpg" alt="Image 6" />
-                </div>
+   <div class="gallery-container dispay-none-mobile">
+    <div class="gallery-columns">
+        <div class="column column-1" data-direction="up">
+            <img src="public/img/JUSTE-HELP.JPG" alt="Image 3" />
+            <img src="public/img/jcb-devexpo-public.jpeg" alt="Image 5" />
+            <img src="public/img/jc-banj.jpg" alt="Image 1" />
+            <img src="public/img/jcb-parlement.jpg" alt="Image 4" />
+            <img src="public/img/jc_casdetude.jpg" alt="Image 6" />
+        </div>
 
-            <div class="column column-2" data-direction="down">
-                <img src="img/jc_gret.jpg" alt="Image 2" />
-                <img src="img/jc_pic.jpg" alt="Image 7" />
-                <img src="img/jc_mentor.jpg" alt="Image 8" />
-                <img src="img/jcb-devexpo-haiti.jpeg" alt="Image 9" />
-                <img src="img/jc_speak.jpg" alt="Image 9" />
-                <img src="img/jc_mab.jpg" alt="Image 10" />
-                </div>
-            
-            <div class="column column-3" data-direction="up">
-                <img src="img/jcp-devexpo-sepeking.jpeg" alt="Image 11" />
-                <img src="img/jcb-young-speker.jpeg" alt="Image 12" />
-                <img src="img/jc_casdetude.jpg" alt="Image 13" />
-                <img src="img/jc_gret.jpg" alt="Image 14" />
-                <img src="img/jc_spekaer.jpg" alt="Image 15" />
-                </div>
+        <div class="column column-2" data-direction="down">
+            <img src="public/img/jc_gret.jpg" alt="Image 2" />
+            <img src="public/img/jc_pic.jpg" alt="Image 7" />
+            <img src="public/img/jc_mentor.jpg" alt="Image 8" />
+            <img src="public/img/jcb-devexpo-haiti.jpeg" alt="Image 9" />
+            <img src="public/img/jc_speak.jpg" alt="Image 9" />
+            <img src="public/img/jc_mab.jpg" alt="Image 10" />
+        </div>
+        
+        <div class="column column-3" data-direction="up">
+            <img src="public/img/jcp-devexpo-sepeking.jpeg" alt="Image 11" />
+            <img src="public/img/jcb-young-speker.jpeg" alt="Image 12" />
+            <img src="public/img/jc_casdetude.jpg" alt="Image 13" />
+            <img src="public/img/jc_gret.jpg" alt="Image 14" />
+            <img src="public/img/jc_spekaer.jpg" alt="Image 15" />
         </div>
     </div>
+</div>
 
   </div>
 </section>
@@ -305,49 +228,9 @@
   </section>
 
   <!-- ================== FOOTER ================== -->
-  <footer class="footer">
-    <p class="text-dark">© 2025 Juste-Cœur Beaubrun. Tous droits réservés.</p>
-
-    <div class="footer-links">
-      <a href="#">Mentions légales</a>
-      <a href="#">Politique de confidentialité</a>
-    </div>
-  </footer>
-
-    <script>
-        const accordions = document.querySelectorAll('.accordion-btn');
-
-        accordions.forEach(btn => {
-            btn.addEventListener('click', () => {
-                const content = btn.nextElementSibling;
-                const icon = btn.querySelector('.icon');
-
-                content.classList.toggle('open');
-                icon.textContent = content.classList.contains('open') ? "-" : "+";
-            });
-        });
-    </script>
-
-
-
-    <!-- jquery plugins here-->
-    <script src="js/jquery-1.12.1.min.js"></script>
-    <!-- popper js -->
-    <script src="js/popper.min.js"></script>
-    <!-- bootstrap js -->
-    <script src="js/bootstrap.min.js"></script>
-    <!-- easing js -->
-    <script src="js/jquery.magnific-popup.js"></script>
-    <!-- masonry js -->
-    <script src="js/masonry.pkgd.js"></script>
-    <!-- particles js -->
-    <script src="js/owl.carousel.min.js"></script>
-
-    <script src="js/jquery.nice-select.min.js"></script>
-    <!-- custom js -->
-    <script src="js/custom.js"></script>
-    <!-- custom js -->
-    <script src="js/testimonial.js"></script>
+  <?php
+    require_once "../includes/footer.php";
+?>
 
  
         <script>
@@ -524,9 +407,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 </script>
 
-<div id="google_translate_element" style="display:none;"></div>
-<script src="js/global.js"></script>
-<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 
 </html>

@@ -1,125 +1,33 @@
+<?php
+
+?>
+
 <!doctype html>
 <html lang="en">
-
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
-
-
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-   <meta property="og:title" content="Juste-Coeur BEAUBRUN: Économiste et Innovateur Social" />
-    
+    <meta property="og:title" content="Juste-Coeur BEAUBRUN: Économiste et Innovateur Social" />
     <meta property="og:description" content="Découvrez les engagements et le parcours de Juste-Cœur Beaubrun" />
-    
     <meta property="og:url" content="https://justecoeurb.ht/" />
-    
     <meta property="og:image" content="https://justecoeurb.ht/img/jc_speaking.jpg" />
-    
     <meta property="og:type" content="website" />
-    
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="https://justecoeurb.ht/img/jc_speaking.jpg">
+
     
-
-
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Juste Coeur Beaubrun</title>
 
-
-    <link rel="icon" href="img/banner_bg_2.png">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- animate CSS -->
-    <link rel="stylesheet" href="css/animate.css">
-    <!-- owl carousel CSS -->
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <!-- themify CSS -->
-    <link rel="stylesheet" href="css/themify-icons.css">
-    <!-- flaticon CSS -->
-    <link rel="stylesheet" href="css/flaticon.css">
-    <!-- font awesome CSS -->
-    <link rel="stylesheet" href="css/magnific-popup.css">
-    <!-- swiper CSS -->
-    <link rel="stylesheet" href="css/slick.css">
-    <link rel="stylesheet" href="css/gijgo.min.css">
-    <link rel="stylesheet" href="css/nice-select.css">
-    <link rel="stylesheet" href="css/all.css">
-    <!-- style CSS -->
-    <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
     <!--::header part start::-->
-<section class="bg-white ">
-    <header class="main_menu home_menu">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-12">
-                    <nav class="navbar navbar-expand-lg navbar-light">
-                        <a class="logo" href="index.html">
-                            <h3 class="m-0">Juste-Cœur <span>Beaubrun</span></h3>
-                            <small>LEADERSHIP · INNOVATION · JEUNESSE</small>
-                         </a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse"
-                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="menu_icon"><i class="ti-menu"></i></span>
-                        </button>
 
-                        <div class="collapse navbar-collapse main-menu-item" id="navbarSupportedContent">
-                            <ul class="navbar-nav">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/about">A propos</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="projet.html">Engagements</a>
-                                </li>
-                                
-                                <li class="nav-item">
-                                    <a class="nav-link" href="publication.html">Publications</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="blog.html">Blog</a>
-                                </li>
+<?php
+require_once 'includes/header.php';
+?>
 
-                                <li class="nav-item translate-dropdown dropdown">
-                                    <a class="nav-link  dropdown-toggle" href="blog.html" id="navbarDropdown"
-                                        role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Langues
-                                    </a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="#" onclick="translateLanguage('fr')"><img src="https://flagcdn.com/24x18/fr.png" alt=""> Français</a>
-                                        <a class="dropdown-item" href="#" onclick="translateLanguage('en')"><img src="https://flagcdn.com/24x18/gb.png" alt=""> English</a>
-                                        <a class="dropdown-item" href="#" onclick="translateLanguage('es')"><img src="https://flagcdn.com/24x18/es.png" alt=""> Español</a>
-                                        <a class="dropdown-item" href="#" onclick="translateLanguage('ht')"><img src="https://flagcdn.com/24x18/ht.png" alt=""> Kreyòl Ayisyen</a>
-                                        <a class="dropdown-item" href="#" onclick="translateLanguage('pt')"><img src="https://flagcdn.com/24x18/pt.png" alt=""> Português</a>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="social_icon">
-                            <a href="http://facebook.com/justecoeur.beaubrun"><i class="fab fa-facebook-square"></i></a>
-                            <a href="http://instagram.com/justecoeurb"><i class="fab fa-instagram"></i></a>
-                            <a href="http://linkedin.com/in/justecoeurbeaubrun"><i class="fab fa-linkedin"></i></a>
-                            <a href="http://x.com/justecoeurb"><i class="fab fa-twitter"></i></a>
-                        </div>
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </header>
-
-  </section>
-    <!-- Header part end-->
-
-    <!-- Header part end-->
-    <!-- SECTION BLEUE -->
-<section class="hero-blue position-relative py-5">
+ <section class="hero-blue position-relative py-5">
   <div class="container">
     <div class="row align-items-center">
       <div class="col-lg-7">
@@ -138,8 +46,8 @@
         </p>
 
         <div class=" gap-3 mt-4">
-          <a href="#contact" class="btn btn-primary mt-3 px-4 py-2">Proposer une collaboration</a>
-          <a href="about.html" class="btn btn-outline mt-3 px-4 py-2">Découvrir son parcours</a>
+          <a href="pages/contact.php" class="btn btn-primary mt-3 px-4 py-2">Proposer une collaboration</a>
+          <a href="pages/about.php" class="btn btn-outline mt-3 px-4 py-2">Découvrir son parcours</a>
         </div>
 
         <ul class="mt-4 text-white">
@@ -156,10 +64,8 @@
       </div>
     </div>
   </div>
-  <img src="img/banner_bg_2.png" data-aos="zoom-in" data-aos-duration="1500" class="hero-abs-img" alt="Portrait">
+  <img src="public/img/banner_bg_2.png" data-aos="zoom-in" data-aos-duration="1500" class="hero-abs-img" alt="Portrait">
 </section>
-
-
 <!-- SECTION BLANCHE -->
 <section class="hero-white py-5">
   <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="800" class="container">
@@ -173,59 +79,11 @@
       des ponts entre jeunesse, innovation et développement.
     </p>
 
-    <a href="about.html" class="mt-3 text-primary">Lire la biographie complète →</a>
+    <a href="pages/about.php" class="mt-3 text-primary">Lire la biographie complète →</a>
     </div>
     
   </div>
 </section>
-
-<!-- <section class="timeline-section py-5 bg-light">
-    <div class="container">
-        <div class="row text-center">
-
-            <div class="col-lg">
-                <div class="timeline-dot"></div>
-                <h5 class="fw-bold mt-3">Bivouac, Môle Saint-Nicolas</h5>
-                <p class="text-muted">
-                    Origines, engagement communautaire et contact direct avec les réalités du territoire.
-                </p>
-            </div>
-
-            <div class="col-lg">
-                <div class="timeline-dot"></div>
-                <h5 class="fw-bold mt-3">Université Notre Dame d'Haïti</h5>
-                <p class="text-muted">
-                    Licence en économie, compréhension des dynamiques macro et micro-économiques.
-                </p>
-            </div>
-
-            <div class="col-lg">
-                <div class="timeline-dot"></div>
-                <h5 class="fw-bold mt-3">HELP & OSUN Bard College</h5>
-                <p class="text-muted">
-                    Parcours en leadership, citoyenneté, IT et entreprise sociale.
-                </p>
-            </div>
-
-            <div class="col-lg">
-                <div class="timeline-dot"></div>
-                <h5 class="fw-bold mt-3">PLES</h5>
-                <p class="text-muted">
-                    Co-fondateur du Programme de Leadership et d’Entrepreneuriat Scolaire.
-                </p>
-            </div>
-
-            <div class="col-lg">
-                <div class="timeline-dot"></div>
-                <h5 class="fw-bold mt-3">Banj Labs</h5>
-                <p class="text-muted">
-                    Direction de l’incubation, de la recherche et de programmes d’innovation.
-                </p>
-            </div>
-
-        </div>
-    </div>
-</section> -->
 
 <section data-aos="fade-up" data-aos-delay="200" data-aos-duration="800" class="timeline-section py-5 bg-light">
     <div class="container">
@@ -281,9 +139,10 @@
 
             <!-- Images à gauche -->
             <div class="col-lg-6 d-flex gap-3 justify-content-center">
-                <img src="./img/jc_father.JPG" class="mission-img" alt="photo 1">
-            </div>
-
+                  <img src="./public/img/jc_father.JPG" class="mission-img" alt="Photo Collage JusteCoeur et Son père">
+                </div>
+                
+              
             <!-- Bloc Mission à droite -->
             <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="800" class="col-lg-6">
                 <div class="mission-card p-4 p-lg-5">
@@ -309,36 +168,36 @@
 <section class="projects my-5">
   <div class="container">
     <div class="row">
-    <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="800" class="  col-12 ">
+    <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="800" class="col-12 ">
       <div class="justify-content-center align-items-center text-center">
-<h2 class="display-5 fw-bold">Projets et programmes <br> auxquels Juste-Coeur Beaubrun a contribué</h2>
-      <div class="container w-100 d-flex justify-content-center">
-        <p class="lead col-lg-7 text-muted mb-4">
-        Des programmes qui connectent les jeunes aux outils, mentors et opportunités
-        dont ils ont besoin pour transformer leurs communautés.
-      </p>
-      </div>
-      </div>
-      
-<div class="d-flex justify-content-lg-end">
-  <a href="projet.html" class="mb-5  explore">Explorer tous les projets →</a>
-   
-        </div>
-        </div>
-        </div>
+        <h2 class="display-5 fw-bold">Projets et programmes <br> auxquels Juste-Coeur Beaubrun a contribué</h2>
+            <div class="container w-100 d-flex justify-content-center">
+                <p class="lead col-lg-7 text-muted mb-4">
+                Des programmes qui connectent les jeunes aux outils, mentors et opportunités
+                dont ils ont besoin pour transformer leurs communautés.
+            </p>
+            </div>
+            </div>
+            
+        <div class="d-flex justify-content-lg-end">
+        <a href="pages/projet.php" class="mb-5  explore">Explorer tous les projets →</a>
+        
+                </div>
+                </div>
+                </div>
 
-      <div class="row justify-content-center">
+            <div class="row justify-content-center">
 
-        <div class="col-md-6 col-lg-4 mb-4">
-          <div class="card h-100 shadow-sm border-0">
-            <div class="card-body">
-              <h3 class="card-title h5 text-primary">Creative Tech Lab</h3>
-              <p class="card-text">
-                Creative
-Tech Lab
-is an open collaboration tool that brings together diverse individuals interested in designing the future of the creative industries.
-              </p>
-              <a href="https://creativetlab.com/" class="btn-outline mt-4 px-4 py-2">Voir le projet →</a>
+                <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <div class="card-body">
+                    <h3 class="card-title h5 text-primary">Creative Tech Lab</h3>
+                    <p class="card-text">
+                        Creative
+        Tech Lab
+        is an open collaboration tool that brings together diverse individuals interested in designing the future of the creative industries.
+                    </p>
+                    <a href="https://creativetlab.com/" class="btn-outline mt-4 px-4 py-2">Voir le projet →</a>
               
             </div>
           </div>
@@ -370,6 +229,7 @@ is an open collaboration tool that brings together diverse individuals intereste
       </div>
   </div>
   
+
 </section>
 
 <!-- =========================
@@ -389,8 +249,8 @@ is an open collaboration tool that brings together diverse individuals intereste
               </div>
 
               <div class="contact-image">
-                  <img src="./img/jc_speaking.jpg" alt="Conférence">
-                  <div class="bubble bubble-right"><img src="./img/juste_coeut_web_assets_17.png" alt=""></div>
+                  <img src="./public/img/jc_speaking.jpg" alt="Conférence">
+                  <div class="bubble bubble-right"><img src="./public/img/juste_coeut_web_assets_17.png" alt=""></div>
               </div>
       </div>
   </div>
@@ -414,28 +274,28 @@ is an open collaboration tool that brings together diverse individuals intereste
                 
                 <div class="single_service_part">
                     <div class="single_service_text">
-                        <img class="img" src="./img/juste_coeut_web_assets_5.png" alt="">
+                        <img class="img" src="public/img/juste_coeut_web_assets_5.png" alt="">
                         <h2>2004 – 2019 </h2>
                         <p>Bourse d’excellence du Collège La Fraternité, attribuée dès la maternelle pour l’ensemble du parcours scolaire</p>
                     </div>
                 </div>
                 <div class="single_service_part active">
                     <div class="single_service_text">
-                        <img class="img" src="./img/juste_coeut_web_assets_5.png" alt="">
+                        <img class="img" src="public/img/juste_coeut_web_assets_5.png" alt="">
                         <h2>2016 </h2>
                         <p>1er prix du concours de texte – Centre de Promotion et de Production de l’Art (CPPA)</p>
                     </div>
                 </div>
                 <div class="single_service_part">
                     <div class="single_service_text">
-                        <img class="img" src="./img/juste_coeut_web_assets_5.png" alt="">
+                        <img class="img" src="public/img/juste_coeut_web_assets_5.png" alt="">
                         <h2>2017 </h2>
                         <p> 2e prix du concours de texte – CAPOMAR</p>
                     </div>
                 </div>
                 <div class="single_service_part active">
                     <div class="single_service_text">
-                        <img class="img" src="./img/juste_coeut_web_assets_5.png" alt="">
+                        <img class="img" src="public/img/juste_coeut_web_assets_5.png" alt="">
                         <h2>2018 et 2019</h2>
                         <p> 1er prix du concours de slam – Splendeur Groupe Haïti (SGH), remporté deux années consécutives</p>
                     </div>
@@ -443,30 +303,30 @@ is an open collaboration tool that brings together diverse individuals intereste
                 
                 <div class="single_service_part">
                     <div class="single_service_text">
-                        <img class="img" src="./img/juste_coeut_web_assets_5.png" alt="">
+                        <img class="img" src="public/img/juste_coeut_web_assets_5.png" alt="">
                         <h2>2019</h2>
                         <p>Obtention de la bourse du Haitian Education and Leadership Program (HELP)</p>
                     </div>
                 </div>
                 <div class="single_service_part active">
                     <div class="single_service_text">
-                        <img class="img" src="./img/juste_coeut_web_assets_5.png" alt="">
+                        <img class="img" src="public/img/juste_coeut_web_assets_5.png" alt="">
                         <h2>2019 – 2023</h2>
                         <p>Sélectionné trois fois sur la liste d’honneur de HELP pour excellence académique</p>
                     </div>
                 </div>
                 <div class="single_service_part active">
                     <div class="single_service_text">
-                        <img class="img" src="./img/juste_coeut_web_assets_5.png" alt="">
+                        <img class="img" src="public/img/juste_coeut_web_assets_5.png" alt="">
                         <h2>Global Peace Summit (GPS)
-2026</h2>
-                        <p>
-Sélectionné pour représenter Haïti au GPS à Paris (France)</p>
+    2026</h2>
+                            <p>
+    Sélectionné pour représenter Haïti au GPS à Paris (France)</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        </div>
+            </div>
 </section>
 <!-- ================= Quote Section ================= -->
 <section data-aos="fade-up" data-aos-delay="200" data-aos-duration="800" class="quote-section">
@@ -483,13 +343,13 @@ Sélectionné pour représenter Haïti au GPS à Paris (France)</p>
 <section data-aos="fade-up" data-aos-delay="200" data-aos-duration="800" class="mt-4 actualites-reflections">
   <div  class="container">
     <div class="row">
- <div class="header col-sm-12 col-lg-4">
+        <div class="header col-sm-12 col-lg-4">
         <div class="text-content">
             <h1>Actualités et réflexions</h1>
             <p>Articles, annonces de programmes, interventions et histoires de terrain.</p>
 
-<div>
-          <a href="publication.html" class="view-all">Voir tous les articles →</a>
+            <div>
+          <a href="pages/publication.php" class="view-all">Voir tous les articles →</a>
         </div>
         </div>
         
@@ -516,7 +376,7 @@ Sélectionné pour représenter Haïti au GPS à Paris (France)</p>
                 </div>
             </div>
             <div class="card">
-                <div class="image-placeholder" style="background-image: url('./img/blog/Leconomiste-Juste-Coeur-Beaubrun-represente-Haiti-au-Global-Peace-Summit-Paris-2026.webp');"></div>
+                <div class="image-placeholder" style="background-image: url('public/img/blog/Leconomiste-Juste-Coeur-Beaubrun-represente-Haiti-au-Global-Peace-Summit-Paris-2026.webp');"></div>
                 <div class="content">
                     <span class="tag tag-reflexion">Chokarella</span>
                     <h3>À une époque où parler de paix en Haïti semble utopique, les jeunes s'engagent et font briller Haïti sur la scène internationale</h3>
@@ -526,7 +386,7 @@ Sélectionné pour représenter Haïti au GPS à Paris (France)</p>
             </div>
 
             <div class="card">
-                <div class="image-placeholder" style="background-image: url('./img/JUSTE-WEBSITE.webp');"></div>
+                <div class="image-placeholder" style="background-image: url('public/img/JUSTE-WEBSITE.webp');"></div>
                 <div class="content">
                     <span class="tag tag-reflexion">Chokarella</span>
                     <h3>Juste-Cœur Beaubrun, un jeune leader qui se veut utile et engagé dans sa communauté</h3>
@@ -536,7 +396,7 @@ Sélectionné pour représenter Haïti au GPS à Paris (France)</p>
             </div>
 
             <div class="card">
-                <div class="image-placeholder" style="background-image: url('./img/JUSTE-HELP.JPG');"></div>
+                <div class="image-placeholder" style="background-image: url('public/img/JUSTE-HELP.JPG');"></div>
                 <div class="content">
                     <span class="tag tag-programme">HELP</span>
                     <h3>Economie’24</h3>
@@ -549,7 +409,7 @@ Sélectionné pour représenter Haïti au GPS à Paris (France)</p>
             </div>
 
             <div class="card">
-                <div class="image-placeholder" style="background-image: url('./img/JUSTE-MYKOLEG.jpg');"></div>
+                <div class="image-placeholder" style="background-image: url('public/img/JUSTE-MYKOLEG.jpg');"></div>
                 <div class="content">
                     <span class="tag tag-leadership">Le Quotidien</span>
                     <h3>Juste-Cœur Beaubrun, un leader né pour servir les autres</h3>
@@ -559,7 +419,7 @@ Sélectionné pour représenter Haïti au GPS à Paris (France)</p>
             </div>
 
             <div class="card">
-                <div class="image-placeholder" style="background-image: url('./img/JUSTE-MYKOLEG.jpg');"></div>
+                <div class="image-placeholder" style="background-image: url('public/img/JUSTE-MYKOLEG.jpg');"></div>
                 <div class="content">
                     <span class="tag">Caritas</span>
                     <h3>Entrepreneur du mois (Avril 2021)</h3>
@@ -595,7 +455,7 @@ Sélectionné pour représenter Haïti au GPS à Paris (France)</p>
 
       <ul id="testimonials-list">
         
-        <li class="testimonials-item active" data-image="img/testimony/mireille.jpg">
+        <li class="testimonials-item active" data-image="public/img/testimony/mireille.jpg">
           
           <blockquote class="testimonial-quote">
             “ J’ai eu le privilège de superviser Juste-Cœur Beaubrun, un stagiaire avec de rares qualités : respectueux, assidu et remarquablement proactif. Il savait concilier ses responsabilités d’étudiant et de stagiaire avec une maturité exceptionnelle. Engagé, organisé et toujours prêt à contribuer, il a laissé une empreinte positive au sein de l’équipe. Je lui souhaite un brillant parcours pour la suite. ”
@@ -606,7 +466,7 @@ Sélectionné pour représenter Haïti au GPS à Paris (France)</p>
           </div>
         </li>
 
-        <li  class="testimonials-item" data-image="img/testimony/evederson.jpeg">
+        <li  class="testimonials-item" data-image="public/img/testimony/evederson.jpeg">
           <blockquote class="testimonial-quote">
             “ Je pourrais écrire un livre pour témoigner à quel point tu es un leader né. J’ai eu la chance de te voir grandir dans notre quartier avec une énergie remarquable, et jusqu’à aujourd’hui, cette fougue demeure intacte. Tu n’as jamais dévié de ta ligne de conduite : toujours avancer avec pour objectif de servir ta communauté.
               Au sein de PLES, nous nous sentons toujours en confiance lorsqu’une tâche est entre tes mains, car nous savons que tu l’accompliras de la meilleure manière possible.
@@ -617,7 +477,7 @@ Sélectionné pour représenter Haïti au GPS à Paris (France)</p>
             <span class="testimonial-role">Co-Fondateur PLES</span>
           </div>
         </li>
-        <li  class="testimonials-item" data-image="img/testimony/Turenne_Photo - Vickania Turenne.jpg">
+        <li  class="testimonials-item" data-image="public/img/testimony/Turenne_Photo - Vickania Turenne.jpg">
           <blockquote class="testimonial-quote">
             “ J'ai particulièrement collaboré avec Juste-Coeur Beaubrun au sein du comité des boursiers de Haitian Education and Leadership Program (HELP). En tant que leader, Juste-Coeur a su faire montre de stratégie et de cohérence. Il sait évaluer, soutenir et valoriser ses collaborateurs. Doté d'une bonne capacité d'écoute et d'observation, bon négotiateur, 
               Juste-Coeur sait communiquer et gère les conflits efficacement. Juste-Coeur  est capable de mobiliser les ressources nécessaires et fait preuve d'un leadership extraordinaire.”
@@ -628,7 +488,7 @@ Sélectionné pour représenter Haïti au GPS à Paris (France)</p>
           </div>
         </li>
        
-        <li  class="testimonials-item" data-image="img/duv.jpg">
+        <li  class="testimonials-item" data-image="public/img/duv.jpg">
           <blockquote class="testimonial-quote">
             “ Pour moi, Juste-Cœur Beaubrun est animé par deux forces qui structurent profondément son parcours : le leadership et l’exécution. Dès nos premiers échanges, j’ai senti chez lui une clarté d’esprit rare, une manière de transformer immédiatement une idée en action. C’est cette combinaison, vision et capacité à livrer qui m’a convaincu de lui confier les plus grands projets à Banj.
 
@@ -640,9 +500,9 @@ Sélectionné pour représenter Haïti au GPS à Paris (France)</p>
             <strong class="testimonial-name">John Sterlin Duverseau </strong>
             <span class="testimonial-role">Directeur Exécutif Banj</span>
           </div>
-        </li> <a href="img/testimony/20230321_093203 - Sédrick SAINTUS.jpg"></a>
+        </li> <a href="./public/img/testimony/20230321_093203 - Sédrick SAINTUS.jpg"></a>
 
-        <li  class="testimonials-item" data-image="img/testimony/IMG_0477 - Emmanuel Louis-Jeune.jpeg">
+        <li  class="testimonials-item" data-image="public/img/testimony/IMG_0477 - Emmanuel Louis-Jeune.jpeg">
           <blockquote class="testimonial-quote">
             “ Mon expérience professionnel avec Juste-Coeur BEAUBRUN au sein du COCIP(Collectif pour le Contrôle de l’Intégrité Publique) m’a permis de découvrir un jeune homme qui a le sens du leadership, un jeune homme dynamique et méthodique, quelqu’un qui sait bien communiquer. ”
           </blockquote>
@@ -651,7 +511,7 @@ Sélectionné pour représenter Haïti au GPS à Paris (France)</p>
             <span class="testimonial-role">Economiste/Directeur Exécutif Adjoint: Initiative de la société civile(ISC) </span>
           </div>
         </li>
-        <li  class="testimonials-item" data-image="img/testimony/IMG-20251208-WA0020~2 - John-Lesly Cheramy.jpg">
+        <li  class="testimonials-item" data-image="public/img/testimony/IMG-20251208-WA0020~2 - John-Lesly Cheramy.jpg">
           <blockquote class="testimonial-quote">
             “ Avec JC on a été collègue à la Facc, puis collègue dans divers projets... C'est le genre de mec qui se donne pour un groupe et qui fera les sacrifices nécessaires pour le bien du groupe...
             JC a des valeurs et la loyauté en fait partie, lorsque tu bosses avec lui, tu as l'assurance d'avoir quelqu'un qui se donnera à 100% jusqu'au bout. 
@@ -662,18 +522,18 @@ Sélectionné pour représenter Haïti au GPS à Paris (France)</p>
             <span class="testimonial-role">Project and social media manager: GSCC </span>
           </div>
         </li>
-        <li  class="testimonials-item" data-image="img/testimony/20230321_093203 - Sédrick SAINTUS.jpg">
+        <li  class="testimonials-item" data-image="public/img/testimony/20230321_093203 - Sédrick SAINTUS.jpg">
           <blockquote class="testimonial-quote">
             “ En collaborant à Juste-Coeur, il était alors président du comité de boursiers, j'ai pu observer et apprécier 3 grandes choses digne d'un professionnel de haut-niveau:
-- Sa volonté de donner des résultats satisfaisants pour le public ou la communauté déservi. 
-- Son attachement à ses valeurs intrinsèques. 
-- Sa fougue ou son dynamisme lorsqu'il s'adonne à une activité ou un projet. 
+            - Sa volonté de donner des résultats satisfaisants pour le public ou la communauté déservi. 
+            - Son attachement à ses valeurs intrinsèques. 
+            - Sa fougue ou son dynamisme lorsqu'il s'adonne à une activité ou un projet. 
 
-Ce qu'il doit continuer à travailler, c'est de ne pas confondre certaines fois, vitesse et précipitation. Il faut savoir, dans bien des cas, prendre du recul pour mieux comprendre la réalité ou une situation avant d'agir ou de décider. 
+            Ce qu'il doit continuer à travailler, c'est de ne pas confondre certaines fois, vitesse et précipitation. Il faut savoir, dans bien des cas, prendre du recul pour mieux comprendre la réalité ou une situation avant d'agir ou de décider. 
 
-Je te souhaite du succès continu! Tu es sur le bon chemin.
-Je te laisse avec ces mots: "être en paix avec soi-même et avec les autres". 
-Voler haut champion! ”
+            Je te souhaite du succès continu! Tu es sur le bon chemin.
+            Je te laisse avec ces mots: "être en paix avec soi-même et avec les autres". 
+            Voler haut champion! ”
           </blockquote>
           <div class="author">
             <strong class="testimonial-name">Sedrick SAINTUS</strong>
@@ -697,7 +557,7 @@ Voler haut champion! ”
 
     <div class="testimonials-image">
       <img id="testimonial-image" 
-        src="img/testimony/mireille.jpg" 
+        src="public/img/testimony/mireille.jpg" 
         alt="Mireille Dextra">
     </div>
 
@@ -725,17 +585,17 @@ Voler haut champion! ”
                     <i class="fas fa-calendar-alt me-2"></i> Réservez une réunion
                 </a>
 
-                <a href="docs/cv-justecoeurbeaubrun.pdf" id="download-cv" class="btn btn-primary mt-4 px-4 py-2" 
+                <a href="public/docs/cv-justecoeurbeaubrun.pdf" id="download-cv" class="btn btn-primary mt-4 px-4 py-2" 
                    download>
                     <i class="fas fa-download me-2"></i> Télécharger le CV
                 </a>
                 
             </div>
-            <a href="docs/bio-justecoeurbeaubrun.pdf" id="download-cv" class="btn btn-primary mt-4 px-4 py-2" 
+            <a href="public/docs/bio-justecoeurbeaubrun.pdf" id="download-cv" class="btn btn-primary mt-4 px-4 py-2" 
                    download>
                     <i class="fas fa-download me-2"></i> Télécharger la bio
                 </a>
-            <a href="docs/PortFolio_JCB_GPC_YPF_GBS en-US.pdf" id="download-cv" class="btn btn-primary mt-4 px-4 py-2" 
+            <a href="public/docs/PortFolio_JCB_GPC_YPF_GBS en-US.pdf" id="download-cv" class="btn btn-primary mt-4 px-4 py-2" 
                    download>
                     <i class="fas fa-download me-2"></i> Télécharger mon portfolio
             </a>
@@ -786,42 +646,17 @@ Voler haut champion! ”
     <button type="submit" class="btn btn-secondary mt-4 px-4 py-2">
         Envoyer la demande
     </button>
-</form>
+    </form>
+            </div>
         </div>
-    </div>
 </section>
 
-<!-- ================== FOOTER ================== -->
-  <footer data-aos="fade-up" data-aos-delay="200" data-aos-duration="800" class="footer">
-    <p class="text-dark">&copy; <script>document.write(new Date().getFullYear());</script> Juste-Cœur Beaubrun. Tous droits réservés.</p>
+<!-- Footer -->
+<?php
+require_once 'includes/footer.php';
+?>
 
-    <div class="footer-links">
-      <a href="mentionlegal.html">Mentions légales</a>
-      <a href="politiquedeconfidentialite.html">Politique de confidentialité</a>
-    </div>
-  </footer> 
-
-
-    <!-- jquery plugins here-->
-    <script src="js/jquery-1.12.1.min.js"></script>
-    <!-- popper js -->
-    <script src="js/popper.min.js"></script>
-    <!-- bootstrap js -->
-    <script src="js/bootstrap.min.js"></script>
-    <!-- easing js -->
-    <script src="js/jquery.magnific-popup.js"></script>
-    <!-- masonry js -->
-    <script src="js/masonry.pkgd.js"></script>
-    <!-- particles js -->
-    <script src="js/owl.carousel.min.js"></script>
-
-    <script src="js/jquery.nice-select.min.js"></script>
-    <!-- custom js -->
-    <script src="js/custom.js"></script>
-    <!-- custom js -->
-    <script src="js/testimonial.js"></script>
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<!-- Footer -->
   
   <script>
     AOS.init({
@@ -830,113 +665,109 @@ Voler haut champion! ”
       once: true      // Si l'animation ne doit se jouer qu'une seule fois lors du défilement
     });
   </script>
-
  
-        <script>
-const container = document.getElementById('cards');
-document.getElementById('nextBtn').onclick = () => {
-  container.scrollBy({ left: 350, behavior: "smooth" });
-};
-document.getElementById('prevBtn').onclick = () => {
-  container.scrollBy({ left: -350, behavior: "smooth" });
-};
+<script>
+    const container = document.getElementById('cards');
+    document.getElementById('nextBtn').onclick = () => {
+    container.scrollBy({ left: 350, behavior: "smooth" });
+    };
+    document.getElementById('prevBtn').onclick = () => {
+    container.scrollBy({ left: -350, behavior: "smooth" });
+    };
 </script>
 
     </script>
 
  <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const wrapper = document.querySelector('.cards-wrapper');
-    const prevButton = document.querySelector('.prev-button');
-    const nextButton = document.querySelector('.next-button');
+        document.addEventListener('DOMContentLoaded', () => {
+            const wrapper = document.querySelector('.cards-wrapper');
+            const prevButton = document.querySelector('.prev-button');
+            const nextButton = document.querySelector('.next-button');
 
-    if (wrapper && prevButton && nextButton) {
-        // Fonction pour défiler par largeur de carte
-        const scrollAmount = 320; // 300px (min-width carte) + 20px (gap)
+            if (wrapper && prevButton && nextButton) {
+                // Fonction pour défiler par largeur de carte
+                const scrollAmount = 320; // 300px (min-width carte) + 20px (gap)
 
-        nextButton.addEventListener('click', () => {
-            wrapper.scrollLeft += scrollAmount;
-        });
+                nextButton.addEventListener('click', () => {
+                    wrapper.scrollLeft += scrollAmount;
+                });
 
-        prevButton.addEventListener('click', () => {
-            wrapper.scrollLeft -= scrollAmount;
-        });
-    }
-});
-
-document.addEventListener('DOMContentLoaded', (event) => {
-    const timelineItems = document.querySelectorAll('.timeline-box, .timeline-dot');
-    
-    // 1. Applique la classe cachée (et décalée à droite)
-    timelineItems.forEach(item => {
-        item.classList.add('timeline-hidden');
-    });
-
-    const animateTimeline = (entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                observer.unobserve(entry.target); 
-
-                timelineItems.forEach((item, index) => {
-                    // Calculer le délai progressif (300ms entre chaque élément)
-                    const delay = index * 300; 
-                    
-                    setTimeout(() => {
-                        // 2. Retirer la classe 'timeline-hidden' 
-                        // -> Déclenche l'animation CSS (de droite à gauche + fondu)
-                        item.classList.remove('timeline-hidden');
-                    }, delay);
+                prevButton.addEventListener('click', () => {
+                    wrapper.scrollLeft -= scrollAmount;
                 });
             }
         });
-    };
 
-    const observerOptions = {
-        root: null, 
-        rootMargin: '0px',
-        threshold: 0.1 
-    };
-
-    const timelineSection = document.querySelector('.timeline-section');
-
-    if (timelineSection) {
-        const timelineObserver = new IntersectionObserver(animateTimeline, observerOptions);
-        timelineObserver.observe(timelineSection); 
-    }
-});
-
-    document.addEventListener('DOMContentLoaded', function() {
-        const urlParams = new URLSearchParams(window.location.search);
-        const status = urlParams.get('status');
-        const messageContainer = document.querySelector('.contact-form'); // Ciblez l'endroit où afficher le message
-
-        if (status) {
-            let alertDiv = document.createElement('div');
-            alertDiv.classList.add('alert', 'mt-3');
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const timelineItems = document.querySelectorAll('.timeline-box, .timeline-dot');
             
-            if (status === 'success') {
-                alertDiv.classList.add('alert-success');
-                alertDiv.textContent = "✅ Votre demande a été envoyée avec succès ! Nous vous répondrons très bientôt.";
-            } else if (status === 'error') {
-                alertDiv.classList.add('alert-danger');
-                const errorMsg = urlParams.get('msg') || "❌ Une erreur est survenue lors de l'envoi. Veuillez réessayer.";
-                alertDiv.textContent = errorMsg;
+            // 1. Applique la classe cachée (et décalée à droite)
+            timelineItems.forEach(item => {
+                item.classList.add('timeline-hidden');
+            });
+
+            const animateTimeline = (entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        observer.unobserve(entry.target); 
+
+                        timelineItems.forEach((item, index) => {
+                            // Calculer le délai progressif (300ms entre chaque élément)
+                            const delay = index * 300; 
+                            
+                            setTimeout(() => {
+                                // 2. Retirer la classe 'timeline-hidden' 
+                                // -> Déclenche l'animation CSS (de droite à gauche + fondu)
+                                item.classList.remove('timeline-hidden');
+                            }, delay);
+                        });
+                    }
+                });
+            };
+
+            const observerOptions = {
+                root: null, 
+                rootMargin: '0px',
+                threshold: 0.1 
+            };
+
+            const timelineSection = document.querySelector('.timeline-section');
+
+            if (timelineSection) {
+                const timelineObserver = new IntersectionObserver(animateTimeline, observerOptions);
+                timelineObserver.observe(timelineSection); 
             }
-            
-            // Insère le message avant le formulaire
-            messageContainer.parentNode.insertBefore(alertDiv, messageContainer);
+        });
 
-            // Nettoie l'URL pour la rendre propre après l'affichage du message
-            // history.replaceState(null, '', window.location.pathname);
-        }
-    });
+            document.addEventListener('DOMContentLoaded', function() {
+                const urlParams = new URLSearchParams(window.location.search);
+                const status = urlParams.get('status');
+                const messageContainer = document.querySelector('.contact-form'); // Ciblez l'endroit où afficher le message
+
+                if (status) {
+                    let alertDiv = document.createElement('div');
+                    alertDiv.classList.add('alert', 'mt-3');
+                    
+                    if (status === 'success') {
+                        alertDiv.classList.add('alert-success');
+                        alertDiv.textContent = "✅ Votre demande a été envoyée avec succès ! Nous vous répondrons très bientôt.";
+                    } else if (status === 'error') {
+                        alertDiv.classList.add('alert-danger');
+                        const errorMsg = urlParams.get('msg') || "❌ Une erreur est survenue lors de l'envoi. Veuillez réessayer.";
+                        alertDiv.textContent = errorMsg;
+                    }
+                    
+                    // Insère le message avant le formulaire
+                    messageContainer.parentNode.insertBefore(alertDiv, messageContainer);
+
+                    // Nettoie l'URL pour la rendre propre après l'affichage du message
+                    // history.replaceState(null, '', window.location.pathname);
+                }
+            });
 
  </script>
 
-<!-- Élément Google Translate (obligatoire mais invisible) -->
-<div id="google_translate_element" style="display:none;"></div>
-<script src="js/global.js"></script>
-<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 </body>
 
 </html>
