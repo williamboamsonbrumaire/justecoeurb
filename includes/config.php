@@ -8,12 +8,12 @@ function Connexion()
     try {
         $host = 'localhost'; 
         $dbname = 'jcb';
-         $username = 'root';
+        $username = 'root';
         $password = '';
         // $host = 'localhost'; 
-        // $dbname = 'u626545614_visionchic';
-        //  $username = 'u626545614_vchaiti';
-        // $password = 'vcH@iti25#';
+        // $dbname = 'u820038461_jcb';
+        //  $username = 'u820038461_jcb';
+        // $password = 'JCB#H@iti99!';
        
 
         // Construction correcte du DSN
@@ -24,7 +24,7 @@ function Connexion()
         $conDB = new PDO($connecteur, $username, $password, $encodage);
         $conDB->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $conDB->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-        // 🔹 Forcer MySQL à utiliser le fuseau horaire d'Haïti
+        // Forcer MySQL à utiliser le fuseau horaire d'Haïti
         $conDB->exec("SET time_zone = '-05:00'");
 
         // echo "Connexion réussie"; // tu peux décommenter pour tester
@@ -44,28 +44,32 @@ function verifierLien($lien)
 ?>
 
 <?php
-// 🔹 Retourne le chemin absolu (pour les require)
+// 🔹 Retourne le chemin absolu du serveur (pour les include/require)
 function base_path($path = '') {
-    return __DIR__ . '/' . ltrim($path, '/');
+    return dirname(__DIR__) . '/' . ltrim($path, '/');
 }
 
-// 🔹 Retourne l'URL de base du site (automatique selon environnement)
+// 🔹 Retourne l'URL racine du site (Dynamique : Local ou Hostinger)
 function base_url($path = '') {
-    // Exemple : https://visionchic.hostingerapp.com/
     $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https://' : 'http://';
     $host = $_SERVER['HTTP_HOST'];
 
-    // Pour Hostinger, ton site est directement dans public_html
-    $base = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/\\');
+    // On récupère le dossier du projet (ex: /jcb/ ou /)
+    // On nettoie pour ne garder que la partie commune avant les dossiers comme /pages ou /blog
+    $scriptName = $_SERVER['SCRIPT_NAME'];
+    $dir = str_replace('\\', '/', dirname($scriptName));
+    
+    // Si on est dans un sous-dossier (comme /blog), on remonte à la racine réelle
+    // Cette regex garde la base avant le premier dossier de script rencontré
+    $baseDir = preg_replace('#/(pages|blog|includes|public).*$#', '', $dir);
+    $baseDir = rtrim($baseDir, '/') . '/';
 
-    return $protocol . $host . $base . '/' . ltrim($path, '/');
+    return $protocol . $host . $baseDir . ltrim($path, '/');
 }
 
 function date_haiti($format = 'Y-m-d H:i:s', $time = 'now') {
     $dt = new DateTime($time, new DateTimeZone('America/Port-au-Prince'));
     return $dt->format($format);
 }
-
-
 ?>
 

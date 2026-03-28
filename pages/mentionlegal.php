@@ -307,19 +307,41 @@
 
             <div class="col-lg-4 col-md-12 d-flex justify-content-lg-end justify-content-start flex-wrap gap-3">
                 
-                <a href="pages/projet.php" class="btn btn-white mt-4 px-4 py-2">Découvrir ses engagements</a>
+                <a href="<?php echo base_url('projet'); ?>" class="btn btn-white mt-4 px-4 py-2">Découvrir ses engagements</a>
                 
-                <a href="pages/contact.php" class="mt-3 btn btn-primary mt-4 px-4 py-2">Proposer une collaboration</a>
+                <a href="<?php echo base_url('contact'); ?>" class="mt-3 btn btn-primary mt-4 px-4 py-2">Proposer une collaboration</a>
             </div>
 
         </div>
     </div>
 </section>
 
-<!-- ================== FOOTER ================== -->
-  <?php
-    require_once "../includes/footer.php";
+
+<?php
+// On remonte au dossier parent de "includes" pour trouver la racine, puis on pointe vers config.php
+// Cela fonctionne que tu sois dans /index.php, /pages/about.php ou /blog/article.php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/jcb/includes/config.php';
 ?>
+
+<!-- ================== FOOTER ================== -->
+
+<script src="<?php echo base_url('public/js/jquery-1.12.1.min.js'); ?>"></script>
+<script src="<?php echo base_url('public/js/popper.min.js'); ?>"></script>
+<script src="<?php echo base_url('public/js/bootstrap.min.js'); ?>"></script>
+<script src="<?php echo base_url('public/js/jquery.magnific-popup.js'); ?>"></script>
+<script src="<?php echo base_url('public/js/masonry.pkgd.js'); ?>"></script>
+<script src="<?php echo base_url('public/js/owl.carousel.min.js'); ?>"></script>
+<script src="<?php echo base_url('public/js/jquery.nice-select.min.js'); ?>"></script>
+<script src="<?php echo base_url('public/js/custom.js'); ?>"></script>
+<script src="<?php echo base_url('public/js/testimonial.js'); ?>"></script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<!-- Google Translate (invisible) -->
+<div id="google_translate_element" style="display:none;"></div>
+<script src="<?php echo base_url('public/js/global.js'); ?>"></script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> 
+
 </body>
 
 </html>

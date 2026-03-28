@@ -68,15 +68,23 @@ CREATE TABLE newsletter (
     UNIQUE KEY uniq_newsletter_email (email)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- -------------------------------
--- TABLE blog
--- -------------------------------
-CREATE TABLE blog (
-    id_blog INT AUTO_INCREMENT PRIMARY KEY,
-    titre VARCHAR(200) NOT NULL,
-    intro TEXT,
-    contenu LONGTEXT NOT NULL,
-    categorie VARCHAR(100),
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMP NULL ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+ 
+-- ============================================================
+-- Structure finale complète de la table blog
+-- (à utiliser si vous recréez la table from scratch)
+-- ============================================================
+ 
+ CREATE TABLE `blog` (
+--   `id_blog`          INT           NOT NULL AUTO_INCREMENT,
+--   `titre`            VARCHAR(255)  NOT NULL,
+--   `intro`            TEXT          NOT NULL,
+--   `contenu`          LONGTEXT      NOT NULL,
+--   `categorie`        VARCHAR(100)  NOT NULL,
+--   `photo_couverture` VARCHAR(255)  NULL DEFAULT NULL,
+--   `auteur`           VARCHAR(156)  NOT NULL DEFAULT '',
+--   `statut`           ENUM('brouillon','publié') NOT NULL DEFAULT 'brouillon',
+--   `tags`             VARCHAR(500)  NULL DEFAULT NULL,
+--   `created_at`       TIMESTAMP     NULL DEFAULT CURRENT_TIMESTAMP,
+--   `updated_at`       TIMESTAMP     NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+--   PRIMARY KEY (`id_blog`)
+-- ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

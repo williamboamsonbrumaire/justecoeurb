@@ -1,0 +1,10 @@
+RewriteEngine On
+RewriteBase /jcb/blog/
+
+# ── Si ce n'est pas un fichier ou dossier réel ───────────────────────────────
+# (évite de réécrire index.php, blog-detail.php, images, etc.)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# ── Tout segment slug → blog-detail.php?slug=segment ────────────────────────
+RewriteRule ^([a-z0-9][a-z0-9-]*)/?$ blog-detail.php?slug=$1 [L,QSA]

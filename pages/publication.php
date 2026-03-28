@@ -1,3 +1,16 @@
+
+<?php
+// C'est la méthode la plus robuste
+require_once __DIR__ . '/../manage/dashboard/model/post-crud.php';
+require_once __DIR__ . '/../manage/dashboard/model/post-video-crud.php';
+
+$articles        = getAllArticles($conDB);
+$videos          = getAllVideos($conDB);
+
+
+
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -44,7 +57,7 @@
     </section>
     <!-- breadcrumb start-->
 
-<ul id="articles-data" hidden>
+<!-- <ul id="articles-data" hidden>
     <li
     data-img="./img/blog/BID-Banj.jpg"
     data-title="BANJ et la BID lancent le projet ProAI pour stimuler l’intelligence artificielle en Haïti (Gazette Haiti)"
@@ -96,42 +109,40 @@
     data-title=""
     data-url="#">
   </li>
+</ul> -->
+
+<ul id="articles-data" hidden>
+  <?php if (!empty($articles)): ?>
+    <?php foreach ($articles as $a): ?>
+      <li 
+        data-img="<?= htmlspecialchars($a['photo'] ?? '') ?>" 
+        data-title="<?= htmlspecialchars($a['description'] ?? '') ?>" 
+        data-url="<?= htmlspecialchars($a['link_article'] ?? '#') ?>"
+        data-author="<?= htmlspecialchars($a['author'] ?? '') ?>">
+      </li>
+    <?php endforeach; ?>
+  <?php endif; ?>
 </ul>
 
 
 <ul id="videos-data" hidden>
-  <li
-    data-title="Peace Beyond Words: From Conversation to Conscious Action"
-    data-embed="https://www.youtube.com/embed/K2UsezxOP5k?si=sXZdKtg2J5XCWjx5">
-  </li>
-  <li
-    data-title="JC_Haiti_World Dream Showcase (We are World Road!)"
-    data-embed="https://www.youtube.com/embed/m6rCKcIGnh4">
-  </li>
-  <li
-    data-title="À la découverte de Juste-coeur Beaubrun, co-fondateur Mykolleg (Entretien 2000)"
-    data-embed="https://www.youtube.com/embed/fK_w8CP1ibY">
-  </li>
-  <li
-    data-title="Modèl avèk Edens Liancourt (TeleMIX)"
-    data-embed="https://www.youtube.com/embed/HmBvbrlOJVw">
-  </li>
-  <li
-    data-title="EN DIRECT | L'INVITE DU MIDI VENDREDI 12 AOUT 2022 (Radio Television Caraïbes)"
-    data-embed="https://www.youtube.com/embed/AG9fcejqg7A">
-  </li>
-  <!-- <li
-    data-title="Vidéo exemple 5 – Conférence jeunesse"
-    data-embed="https://www.youtube.com/embed/m6rCKcIGnh4">
-  </li>
-  <li
-    data-title="Vidéo exemple 6 – Panel innovation"
-    data-embed="https://www.youtube.com/embed/fK_w8CP1ibY">
-  </li> -->
-  <!-- <li
-    data-title="Vidéo exemple 7 – Table ronde"
-    data-embed="https://www.youtube.com/embed/HmBvbrlOJVw">
-  </li> -->
+  <?php if (!empty($videos)): ?>
+    <?php foreach ($videos as $v): 
+      // 1. Extraire l'ID YouTube du lien stocké en base de données
+      preg_match('/(?:youtube\.com\/(?:watch\?v=|embed\/|shorts\/)|youtu\.be\/)([a-zA-Z0-9_-]{11})/', 
+      $v['link_youtube'], $matches);
+      
+      $yt_id = $matches[1] ?? null;
+      
+      // 2. Construire l'URL embed si l'ID existe
+      $embed_url = $yt_id ? "https://www.youtube.com/embed/{$yt_id}" : "#";
+    ?>
+      <li 
+        data-title="<?= htmlspecialchars($v['title_video'] ?? '') ?>" 
+        data-embed="<?= htmlspecialchars($embed_url) ?>">
+      </li>
+    <?php endforeach; ?>
+  <?php endif; ?>
 </ul>
 
 
@@ -173,16 +184,14 @@
         </p>
       </div>
       <div class="col-lg-4 col-md-12 d-flex justify-content-lg-end justify-content-start flex-wrap gap-3">
-        <a href="projet.html" class="btn btn-white mt-4 px-4 py-2">Découvrir ses engagements</a>
-        <a href="contact.html" class="mt-3 btn btn-primary mt-4 px-4 py-2">Proposer une collaboration</a>
+        <a href="<?php echo base_url('projet'); ?>" class="btn btn-white mt-4 px-4 py-2">Découvrir ses engagements</a>
+        <a href="<?php echo base_url('contact'); ?>" class="mt-3 btn btn-primary mt-4 px-4 py-2">Proposer une collaboration</a>
       </div>
     </div>
   </div>
 </section>
 
-<?php
-    require_once "../includes/footer.php";
-?>
+
 
 <script>
 /* ══════════════════════════════

@@ -220,17 +220,39 @@
       </p>
 
       <div class="cta-buttons">
-        <a href="contact.html" class="btn btn-primary mt-3 px-4 py-2">Proposer une collaboration</a>
-        <a href="publication.html" class="btn btn-white mt-3 px-4 py-2">Voir études & publications</a>
+        <a href="<?php echo base_url('contact'); ?>" class="btn btn-primary mt-3 px-4 py-2">Proposer une collaboration</a>
+        <a href="<?php echo base_url('publication'); ?>" class="btn btn-white mt-3 px-4 py-2">Voir études & publications</a>
       </div>
 
     </div>
   </section>
 
-  <!-- ================== FOOTER ================== -->
-  <?php
-    require_once "../includes/footer.php";
+ 
+
+<?php
+// On remonte au dossier parent de "includes" pour trouver la racine, puis on pointe vers config.php
+// Cela fonctionne que tu sois dans /index.php, /pages/about.php ou /blog/article.php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/jcb/includes/config.php';
 ?>
+
+<!-- ================== FOOTER ================== -->
+
+<script src="<?php echo base_url('public/js/jquery-1.12.1.min.js'); ?>"></script>
+<script src="<?php echo base_url('public/js/popper.min.js'); ?>"></script>
+<script src="<?php echo base_url('public/js/bootstrap.min.js'); ?>"></script>
+<script src="<?php echo base_url('public/js/jquery.magnific-popup.js'); ?>"></script>
+<script src="<?php echo base_url('public/js/masonry.pkgd.js'); ?>"></script>
+<script src="<?php echo base_url('public/js/owl.carousel.min.js'); ?>"></script>
+<script src="<?php echo base_url('public/js/jquery.nice-select.min.js'); ?>"></script>
+<script src="<?php echo base_url('public/js/custom.js'); ?>"></script>
+<script src="<?php echo base_url('public/js/testimonial.js'); ?>"></script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<!-- Google Translate (invisible) -->
+<div id="google_translate_element" style="display:none;"></div>
+<script src="<?php echo base_url('public/js/global.js'); ?>"></script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> 
 
  
         <script>

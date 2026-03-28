@@ -1,5 +1,9 @@
 <?php
+require_once "manage/dashboard/model/post-crud.php";
+require_once  'manage/dashboard/model/reviews-crud.php';
 
+$articles        = getAllArticles($conDB);
+$reviews = getAllReviews($conDB);
 ?>
 
 <!doctype html>
@@ -160,7 +164,6 @@ require_once 'includes/header.php';
         </div>
     </div>
 </section>
-
 
 <!-- =========================
      SECTION PROJETS
@@ -340,229 +343,165 @@ require_once 'includes/header.php';
 
 <!-- ================= Actualité Section ================= -->
 
+
 <section data-aos="fade-up" data-aos-delay="200" data-aos-duration="800" class="mt-4 actualites-reflections">
-  <div  class="container">
+  <div class="container">
     <div class="row">
-        <div class="header col-sm-12 col-lg-4">
+
+      <div class="header col-sm-12 col-lg-4">
         <div class="text-content">
-            <h1>Actualités et réflexions</h1>
-            <p>Articles, annonces de programmes, interventions et histoires de terrain.</p>
+          <h1>Actualités et réflexions</h1>
+          <p>Articles, annonces de programmes, interventions et histoires de terrain.</p>
 
-            <div>
-          <a href="pages/publication.php" class="view-all">Voir tous les articles →</a>
+          <div>
+            <a href="pages/publication.php" class="view-all">Voir tous les articles →</a>
+          </div>
         </div>
-        </div>
-        
 
-         <div class=" navigation-controls">
-            <button class="nav-button prev-button" aria-label="Article précédent">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
-            </button>
-            <button class="nav-button next-button" aria-label="Article suivant">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
-            </button>
-        </div>
-    </div>
+        <div class="navigation-controls">
+          <button class="nav-button prev-button" aria-label="Article précédent">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </button>
 
-    <div class="carousel-container col-sm-12 col-lg-8"  >
+          <button class="nav-button next-button" aria-label="Article suivant">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+
+      <div class="carousel-container col-sm-12 col-lg-8">
         <div class="cards-wrapper">
-            <div class="card">
-                <div class="image-placeholder" style="background-image: url('./img/blog/BID-Banj.jpg');"></div>
-                <div class="content">
-                    <span class="tag tag-reflexion">Gazette Haiti</span>
-                    <h3>BANJ et la BID lancent le projet ProAI pour stimuler l’intelligence artificielle en Haïti</h3>
-                    <p>La Banque interaméricaine de développement et BANJ ont officiellement lancé le programme ProAI à Port-au-Prince. Cette initiative de coopération technique vise à promouvoir l’intelligence artificielle, former des talents locaux et renforcer l’écosystème d’innovation afin de positionner Haïti dans la transformation numérique mondiale.</p>
-                    <a class="btn text-white btn-secondary mt-3 px-4 py-2" href="https://www.gazettehaiti.com/node/13515">Lire plus</a>
-                </div>
-            </div>
-            <div class="card">
-                <div class="image-placeholder" style="background-image: url('public/img/blog/Leconomiste-Juste-Coeur-Beaubrun-represente-Haiti-au-Global-Peace-Summit-Paris-2026.webp');"></div>
-                <div class="content">
-                    <span class="tag tag-reflexion">Chokarella</span>
-                    <h3>À une époque où parler de paix en Haïti semble utopique, les jeunes s'engagent et font briller Haïti sur la scène internationale</h3>
-                    <p>L'économiste haïtien Juste-Cœur Beaubrun a été le délégué officiel d'Haïti au Global Peace Summit Paris 2026, tenu du 28 au 31 janvier dans les locaux de l'UNESCO et au Sénat français.</p>
-                    <a class="btn text-white btn-secondary mt-3 px-4 py-2" href="https://www.chokarella.com/2025/05/05/juste-coeur-beaubrun-un-jeune-leader-qui-se-veut-utile-et-engage-dans-sa-communaute/">Lire plus</a>
-                </div>
-            </div>
 
-            <div class="card">
-                <div class="image-placeholder" style="background-image: url('public/img/JUSTE-WEBSITE.webp');"></div>
-                <div class="content">
-                    <span class="tag tag-reflexion">Chokarella</span>
-                    <h3>Juste-Cœur Beaubrun, un jeune leader qui se veut utile et engagé dans sa communauté</h3>
-                    <p>Juste-Cœur Beaubrun, économiste et passionné des nouvelles technologies de l’information, souhaite s’investir dans l’évolution de sa communauté. </p>
-                    <a class="btn text-white btn-secondary mt-3 px-4 py-2" href="https://www.chokarella.com/2025/05/05/juste-coeur-beaubrun-un-jeune-leader-qui-se-veut-utile-et-engage-dans-sa-communaute/">Lire plus</a>
-                </div>
-            </div>
+          <?php if (!empty($articles)): ?>
+            <?php foreach ($articles as $a): ?>
 
-            <div class="card">
-                <div class="image-placeholder" style="background-image: url('public/img/JUSTE-HELP.JPG');"></div>
+              <div class="card">
+
+                <?php if (!empty($a['photo'])): ?>
+                  <div class="image-placeholder"
+                       style="background-image: url('<?= htmlspecialchars($a['photo']) ?>');">
+                  </div>
+                <?php else: ?>
+                  <div class="image-placeholder"
+                       style="background-image: url('<?= htmlspecialchars($a['photo']) ?>');">
+                  </div>
+                <?php endif; ?>
+
                 <div class="content">
-                    <span class="tag tag-programme">HELP</span>
-                    <h3>Economie’24</h3>
-                    <p>
-                      Juste-Cœur a grandi à Mare-Rouge, une petite ville du Nord-Ouest connue pour avoir été le lieu de débarquement de Christophe Colomb.
-                    </p>
-                        <a class="btn text-white btn-secondary mt-3 px-4 py-2" href="https://www.uhelp.net/fr/etudiants-actuels/juste-coeur-beaubrun-28p44">Lire plus</a>
+
+                  <span class="tag tag-reflexion">
+                    <?= htmlspecialchars($a['author']) ?>
+                  </span>
+
+                  <h3>
+                    <?= htmlspecialchars($a['description']) ?>
+                  </h3>
+
                 
+
+                  <?php if (!empty($a['link_article'])): ?>
+                    <a class="btn text-white btn-secondary mt-3 px-4 py-2"
+                       href="<?= htmlspecialchars($a['link_article']) ?>"
+                       target="_blank">
+                       Lire plus
+                    </a>
+                  <?php endif; ?>
+
                 </div>
-            </div>
+              </div>
 
-            <div class="card">
-                <div class="image-placeholder" style="background-image: url('public/img/JUSTE-MYKOLEG.jpg');"></div>
-                <div class="content">
-                    <span class="tag tag-leadership">Le Quotidien</span>
-                    <h3>Juste-Cœur Beaubrun, un leader né pour servir les autres</h3>
-                    <p>On a vent dans son milieu que Juste-Cœur Beaubrun est un jeune homme qui bannit toute forme de caprice dans son mode de vie. Brillant, déterminé et surtout laborieux, l’originaire de Mare-rouge, promet d’être un excellent leader pour sa communauté.</p>
-                    <a class="btn text-white btn-secondary mt-3 px-4 py-2" href="https://lequotidiennews.org/juste-coeur-beaubrun-un-leader-ne-pour-servir-les-autres/">Lire plus</a>
-                  </div>
-            </div>
+            <?php endforeach; ?>
+          <?php endif; ?>
 
-            <div class="card">
-                <div class="image-placeholder" style="background-image: url('public/img/JUSTE-MYKOLEG.jpg');"></div>
-                <div class="content">
-                    <span class="tag">Caritas</span>
-                    <h3>Entrepreneur du mois (Avril 2021)</h3>
-                    <p>Je suis le Co-fondateur et Directeur des systèmes d’informations d’une plateforme numérique appelée MyKolleg (mykolleg.com). Je suis le Directeur général d’une marque de vêtement à standard international appelée LABANI (labaniclothing.com).</p>
-                   <a class="btn text-white btn-secondary mt-3 px-4 py-2" href="https://caritasjournalfsesp.wordpress.com/2021/06/25/entrepreneur-du-mois-avril-2021/">Lire plus</a>
-                 
-                  </div>
-            </div>
         </div>
-    </div>
-    </div>
+      </div>
 
     </div>
   </div>
-  </div>
-  </div>
-   
 </section>
 
-
+<!-- Témoignages -->
 <section data-aos="fade-up" data-aos-delay="200" data-aos-duration="800" class="testimonials">
-
-  <div class="testimonials-container container ">
-
+  <div class="testimonials-container container">
     <div class="testimonials-text">
-
       <h2>Références & témoignages</h2>
-
       <p class="subtitle">
         Ils ont collaboré avec Juste-Cœur sur des programmes d’impact,
         des projets communautaires et des initiatives d’innovation.
       </p>
 
       <ul id="testimonials-list">
-        
-        <li class="testimonials-item active" data-image="public/img/testimony/mireille.jpg">
-          
-          <blockquote class="testimonial-quote">
-            “ J’ai eu le privilège de superviser Juste-Cœur Beaubrun, un stagiaire avec de rares qualités : respectueux, assidu et remarquablement proactif. Il savait concilier ses responsabilités d’étudiant et de stagiaire avec une maturité exceptionnelle. Engagé, organisé et toujours prêt à contribuer, il a laissé une empreinte positive au sein de l’équipe. Je lui souhaite un brillant parcours pour la suite. ”
-          </blockquote>
-          <div class="author">
-            <strong class="testimonial-name">Mireille Dextra</strong>
-            <span class="testimonial-role">Enseignante - Auteure</span>
-          </div>
-        </li>
-
-        <li  class="testimonials-item" data-image="public/img/testimony/evederson.jpeg">
-          <blockquote class="testimonial-quote">
-            “ Je pourrais écrire un livre pour témoigner à quel point tu es un leader né. J’ai eu la chance de te voir grandir dans notre quartier avec une énergie remarquable, et jusqu’à aujourd’hui, cette fougue demeure intacte. Tu n’as jamais dévié de ta ligne de conduite : toujours avancer avec pour objectif de servir ta communauté.
-              Au sein de PLES, nous nous sentons toujours en confiance lorsqu’une tâche est entre tes mains, car nous savons que tu l’accompliras de la meilleure manière possible.
-              C’est toujours un plaisir de travailler avec quelqu’un d’aussi créatif et engagé que toi, Juste-Cœur Beaubrun. ”
-          </blockquote>
-          <div class="author">
-            <strong class="testimonial-name">Evederson Previlon </strong>
-            <span class="testimonial-role">Co-Fondateur PLES</span>
-          </div>
-        </li>
-        <li  class="testimonials-item" data-image="public/img/testimony/Turenne_Photo - Vickania Turenne.jpg">
-          <blockquote class="testimonial-quote">
-            “ J'ai particulièrement collaboré avec Juste-Coeur Beaubrun au sein du comité des boursiers de Haitian Education and Leadership Program (HELP). En tant que leader, Juste-Coeur a su faire montre de stratégie et de cohérence. Il sait évaluer, soutenir et valoriser ses collaborateurs. Doté d'une bonne capacité d'écoute et d'observation, bon négotiateur, 
-              Juste-Coeur sait communiquer et gère les conflits efficacement. Juste-Coeur  est capable de mobiliser les ressources nécessaires et fait preuve d'un leadership extraordinaire.”
-          </blockquote>
-          <div class="author">
-            <strong class="testimonial-name">Vickania Turenne</strong>
-            <span class="testimonial-role">Assistante administrative et comptable : Gaz Industriels Associés, S.A</span>
-          </div>
-        </li>
-       
-        <li  class="testimonials-item" data-image="public/img/duv.jpg">
-          <blockquote class="testimonial-quote">
-            “ Pour moi, Juste-Cœur Beaubrun est animé par deux forces qui structurent profondément son parcours : le leadership et l’exécution. Dès nos premiers échanges, j’ai senti chez lui une clarté d’esprit rare, une manière de transformer immédiatement une idée en action. C’est cette combinaison, vision et capacité à livrer qui m’a convaincu de lui confier les plus grands projets à Banj.
-
-              Au fil du temps, je l’ai vu grandir, affiner son approche, et développer une maturité professionnelle qui dépasse largement son âge. Son évolution n’a fait que renforcer ma conviction : Juste-Cœur est quelqu’un qui construit, qui rassemble et qui exécute avec intention.
-
-              C’est cette philosophie, voir loin, agir vite, et toujours livrer, qui définit sa manière de travailler et d’influencer son environnement.”
-          </blockquote>
-          <div class="author">
-            <strong class="testimonial-name">John Sterlin Duverseau </strong>
-            <span class="testimonial-role">Directeur Exécutif Banj</span>
-          </div>
-        </li> <a href="./public/img/testimony/20230321_093203 - Sédrick SAINTUS.jpg"></a>
-
-        <li  class="testimonials-item" data-image="public/img/testimony/IMG_0477 - Emmanuel Louis-Jeune.jpeg">
-          <blockquote class="testimonial-quote">
-            “ Mon expérience professionnel avec Juste-Coeur BEAUBRUN au sein du COCIP(Collectif pour le Contrôle de l’Intégrité Publique) m’a permis de découvrir un jeune homme qui a le sens du leadership, un jeune homme dynamique et méthodique, quelqu’un qui sait bien communiquer. ”
-          </blockquote>
-          <div class="author">
-            <strong class="testimonial-name">Louis-Jeune Jean Pierre Wesner Emmanuel</strong>
-            <span class="testimonial-role">Economiste/Directeur Exécutif Adjoint: Initiative de la société civile(ISC) </span>
-          </div>
-        </li>
-        <li  class="testimonials-item" data-image="public/img/testimony/IMG-20251208-WA0020~2 - John-Lesly Cheramy.jpg">
-          <blockquote class="testimonial-quote">
-            “ Avec JC on a été collègue à la Facc, puis collègue dans divers projets... C'est le genre de mec qui se donne pour un groupe et qui fera les sacrifices nécessaires pour le bien du groupe...
-            JC a des valeurs et la loyauté en fait partie, lorsque tu bosses avec lui, tu as l'assurance d'avoir quelqu'un qui se donnera à 100% jusqu'au bout. 
-            ”
-          </blockquote>
-          <div class="author">
-            <strong class="testimonial-name">John Lesly Cheramy</strong>
-            <span class="testimonial-role">Project and social media manager: GSCC </span>
-          </div>
-        </li>
-        <li  class="testimonials-item" data-image="public/img/testimony/20230321_093203 - Sédrick SAINTUS.jpg">
-          <blockquote class="testimonial-quote">
-            “ En collaborant à Juste-Coeur, il était alors président du comité de boursiers, j'ai pu observer et apprécier 3 grandes choses digne d'un professionnel de haut-niveau:
-            - Sa volonté de donner des résultats satisfaisants pour le public ou la communauté déservi. 
-            - Son attachement à ses valeurs intrinsèques. 
-            - Sa fougue ou son dynamisme lorsqu'il s'adonne à une activité ou un projet. 
-
-            Ce qu'il doit continuer à travailler, c'est de ne pas confondre certaines fois, vitesse et précipitation. Il faut savoir, dans bien des cas, prendre du recul pour mieux comprendre la réalité ou une situation avant d'agir ou de décider. 
-
-            Je te souhaite du succès continu! Tu es sur le bon chemin.
-            Je te laisse avec ces mots: "être en paix avec soi-même et avec les autres". 
-            Voler haut champion! ”
-          </blockquote>
-          <div class="author">
-            <strong class="testimonial-name">Sedrick SAINTUS</strong>
-            <span class="testimonial-role">Directeur des Affaires Etudiantes: HELP</span>
-          </div>
-        </li>
-        
+        <?php if (empty($reviews)): ?>
+          <li class="testimonials-item active">
+            <blockquote class="testimonial-quote">
+              "Aucun témoignage n'est disponible pour le moment."
+            </blockquote>
+          </li>
+        <?php else: ?>
+          <?php 
+          $index = 0;
+          foreach ($reviews as $rv): 
+            // On ne filtre que les actifs pour le site public
+            if ($rv['statut'] !== 'actif') continue;
+            
+            $isActiveClass = ($index === 0) ? 'active' : '';
+            // Ajustement du chemin de l'image (attention au dossier public/)
+            $imgSrc = !empty($rv['photo']) ? $rv['photo'] : 'public/img/default-avatar.jpg';
+          ?>
+            <li class="testimonials-item <?= $isActiveClass ?>" data-image="<?= htmlspecialchars($imgSrc) ?>">
+              <blockquote class="testimonial-quote">
+                “ <?= htmlspecialchars($rv['quote']) ?> ”
+              </blockquote>
+              <div class="author">
+                <strong class="testimonial-name"><?= htmlspecialchars($rv['nom']) ?></strong>
+                <span class="testimonial-role">
+                    <?= htmlspecialchars($rv['role']) ?> 
+                    <?= !empty($rv['organisation']) ? '- ' . htmlspecialchars($rv['organisation']) : '' ?>
+                </span>
+              </div>
+            </li>
+          <?php 
+          $index++;
+          endforeach; 
+          ?>
+        <?php endif; ?>
       </ul>
 
       <div class="controls">
         <button onclick="prevTestimonial()">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
-           
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
         </button>
         <button onclick="nextTestimonial()">
-           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
-           </button>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
       </div>
-
     </div>
 
     <div class="testimonials-image">
-      <img id="testimonial-image" 
-        src="public/img/testimony/mireille.jpg" 
-        alt="Mireille Dextra">
+      <?php 
+        // Image par défaut pour le premier affichage
+        $firstPhoto = 'public/img/default-avatar.jpg';
+        if (!empty($reviews)) {
+            foreach($reviews as $r) {
+                if($r['statut'] === 'actif') {
+                    $firstPhoto = $r['photo'];
+                    break;
+                }
+            }
+        }
+      ?>
+      <img id="testimonial-image" src="<?= htmlspecialchars($firstPhoto) ?>" alt="Témoignage">
     </div>
-
   </div>
-
 </section>
 
 <section data-aos="fade-up" data-aos-delay="200" data-aos-duration="800" id="contact" style="margin-bottom: 0;" class="contact-section">
